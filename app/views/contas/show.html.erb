@@ -1,0 +1,23 @@
+<h1>Visualizar conta</h1>
+
+<dl>
+	<dt>Descrição</dt>
+	<dd><%= @conta.descricao %></dd>
+	<dt>Valor</dt>
+	<dd><%= @conta.valor %></dd>
+	<dt>Tipo de conta</dt>
+	<dd>
+		<% if @conta.tipo_conta == 'R' %>
+			Receita
+		<% else %>
+			Despesa
+		<% end -%>
+	</dd>
+	<dt>Data de Vencimento</dt>
+	<dd><%= formatar_data(@conta.data_vencimento) %></dd>
+	<dt>Data de Pagamento</dt>
+	<dd><%= formatar_data(@conta.data_pagamento) %></dd>
+</dl>
+
+<%= link_to 'Atualizar', edit_conta_path(@conta) %> |
+<%= link_to 'Retornar para a listagem', contas_path %>

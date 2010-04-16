@@ -1,0 +1,84 @@
+#centersquare {
+	position: absolute;
+	width: 600px;
+	height: 400px;
+	left: 25%;
+	top: 15%;
+	border-width: 2px;
+	border-style: solid;
+	border-color: rgb(244,110,4);
+}
+
+#logo {
+	position: absolute;
+	left: -10%;
+	top: -10%;
+	background-color: white;
+}
+
+#logsquare {
+	position: absolute;
+	width: 260px;
+	height: 170px;
+	left: 60%;
+	top: 20%;
+	border-width: 2px;
+	border-style: double;
+	border-color: rgb(212,166,28);
+	background-color: white;
+}
+
+#texto {
+	position: absolute;
+	width: 320px;
+	height: 250px;
+	left: 3%;
+	top: 30%;
+}
+
+#bottominfo {
+        position: absolute;
+        bottom: 17%;
+        left: 48%;
+}
+
+.login {
+	width: 260px;
+}
+
+.login > DIV {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.login LABEL {
+	display: block;
+}
+
+.login INPUT {
+	font-size: 12px;
+	padding: 2px 3px;
+}
+
+.login .botoes {
+	margin-top: 20px;
+}
+
+.login .botoes BUTTON {
+	font-size: 12px;
+}
+
+.login .botoes A {
+	font-size: 11px;
+}
+
+.login .botoes BUTTON,
+.login .botoes A {
+	margin-right: 5px;
+}
+
+.comprimento-4 INPUT[type=text],
+.comprimento-4 INPUT[type=password],
+.comprimento-4 TEXTAREA {
+	width: 200px;
+}

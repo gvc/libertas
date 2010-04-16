@@ -1,0 +1,37 @@
+<h1>Cadastrar Conta</h1>
+
+<% form_for(@conta, :html => {:class => 'cadastro'}) do |f| %>
+  <%= f.error_messages %>
+	<div class="comprimento-8 importante primeiro">
+		<%= f.label :descricao, 'Descrição' %>
+		<%= f.text_area :descricao, :rows => 2 %>
+  </div>
+	<div class="comprimento-4">
+		<%= f.label :valor %>
+		<%= f.text_field :valor, :maxlength => 16 %>
+	</div>
+	<div class="comprimento-4 primeiro">
+		Tipo de Conta:
+		<label>
+			<%= f.radio_button :tipo_conta, 'R' %>
+			Receita
+		</label>
+		<label>
+			<%= f.radio_button :tipo_conta, 'D' %>
+			Despesa
+		</label>
+	</div>
+	<div class="comprimento-4">
+		<%= f.label :data_vencimento, 'Data de vencimento' %>
+		<%= f.text_field :data_vencimento, :maxlength => 10 %>
+	</div>
+	<div class="comprimento-4">
+		<%= f.label :data_pagamento, 'Data de pagamento' %>
+		<%= f.text_field :data_pagamento, :maxlength => 10 %>
+	</div>
+  <div class="botoes primeiro">
+    <%= f.submit 'Enviar' %>
+		ou
+		<%= link_to 'cancelar', contas_path %>
+  </div>
+<% end %>

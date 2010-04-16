@@ -1,0 +1,66 @@
+<h1>Lista de contas</h1>
+
+<h2>Receitas</h2>
+<% if @receitas and @receitas.any? %>
+	<table class="lista">
+		<tbody>
+			<% @receitas.each do |receita| %>
+				<tr>
+					<td>
+						<div id="container">
+							<div id="fixtext">
+								<%=h receita.descricao %>
+							</div>
+							<div id="fiximage">
+								<a href="<%= conta_path receita %>">
+									<img src="/images/listarsmall.png" alt="Listar">
+								</a>
+								<a href="<%= edit_conta_path receita %>">
+									<img src="/images/atualizarsmall.png" alt="Listar">
+								</a>
+								<%= link_to "<img src='/images/removersmall.png' alt='Listar'>", receita, :confirm => 'Deseja realmente remover?', :method=> :delete %>
+							</div>
+						</div>
+					</td>
+				</tr>
+			<% end -%>
+		</tbody>
+	</table>
+<% else %>
+	<p>Não há receitas cadastradas</p>
+<% end -%>
+
+
+<h2>Despesas</h2>
+<% if @despesas and @despesas.any? %>
+	<table class="lista">
+		<tbody>
+			<% @despesas.each do |despesa| %>
+				<tr>
+					<td>
+						<div id="container">
+							<div id="fixtext">
+								<%=h despesa.descricao %>
+							</div>
+							<div id="fiximage">
+								<a href="<%= conta_path despesa %>">
+									<img src="/images/listarsmall.png" alt="Listar">
+								</a>
+								<a href="<%= edit_conta_path despesa %>">
+									<img src="/images/atualizarsmall.png" alt="Listar">
+								</a>
+								<%= link_to "<img src='/images/removersmall.png' alt='Listar'>", despesa, :confirm => 'Deseja realmente remover?', :method=> :delete %>
+							</div>
+						</div>
+					</td>
+				</tr>
+			<% end -%>
+		</tbody>
+	</table>
+<% else %>
+	<p>Não há despesas cadastradas</p>
+<% end -%>
+
+<p>
+	<%= link_to 'Cadastrar nova conta', new_conta_path %>
+</p>

@@ -1,1 +1,2266 @@
 
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 07:43:41) [GET]
+  [4;36;1mConta Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: contas: SELECT * FROM "contas" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: contas: SELECT * FROM "contas" ):
+  app/controllers/contas_controller.rb:5:in `index'
+
+Rendered rescues/_trace (54.7ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateContas (20100416113751)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "contas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100416113751')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("contas")[0m
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 07:43:54) [GET]
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 63ms (View: 58, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-16 07:43:54) [GET]
+
+ActionController::RoutingError (No route matches "/imagens/logo_libertas.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 07:44:02) [GET]
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 07:44:16) [GET]
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 07:44:18) [GET]
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 07:44:19) [GET]
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 07:44:20) [GET]
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 07:44:20) [GET]
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/contas]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateContas (20100416113751)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (13.6ms)[0m   [0mDROP TABLE "contas"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100416113751'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateContas (20100416113751)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "contas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "descricao" text, "data_vencimento" date, "data_pagamento" date, "tipo_conta" varchar(255), "valor" decimal(2,6), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100416113751')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("contas")[0m
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 07:48:20) [GET]
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:48:22) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 50ms (View: 46, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:48:22) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 07:48:32) [GET]
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 07:48:33) [GET]
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 07:48:33) [GET]
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 07:50:02) [GET]
+  [4;36;1mConta Load (0.4ms)[0m   [0;1mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 07:50:03) [GET]
+  [4;35;1mConta Load (0.4ms)[0m   [0mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 07:50:03) [GET]
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 07:50:03) [GET]
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:50:12) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:50:12) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:51:45) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:51:46) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:52:24) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:52:24) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:52:34) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:52:34) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:53:07) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:53:07) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:54:06) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:54:06) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:54:43) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:54:43) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:55:06) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:55:06) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:55:06) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:55:06) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:55:07) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:55:07) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:55:07) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:55:07) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:55:07) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:55:07) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:55:42) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-16 07:55:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/formulario.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:55:42) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:56:02) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-16 07:56:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/formulario.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:56:02) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:56:02) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-16 07:56:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/formulario.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:56:03) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:56:03) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 61ms (View: 5, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-16 07:56:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/formulario.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:56:03) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:56:03) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-16 07:56:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/formulario.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:56:03) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:56:03) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-16 07:56:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/formulario.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:56:03) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:56:48) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-16 07:56:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/formulario.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:56:48) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:56:49) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-16 07:56:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/formulario.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:56:49) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:56:49) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-16 07:56:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/formulario.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:56:49) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:56:49) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-16 07:56:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/formulario.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:56:49) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:56:50) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-16 07:56:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/formulario.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:56:50) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:56:59) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:56:59) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 07:59:41) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 07:59:41) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 08:01:20) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:01:20) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 08:01:51) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:01:51) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 08:02:33) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:02:33) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 08:02:57) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:02:57) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 08:06:22) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:06:22) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 08:06:43) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:06:43) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-04-16 08:07:17) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "conta"=>{"data_vencimento"=>"16/04/2010", "tipo_conta"=>"D", "valor"=>"510,00", "data_pagamento"=>"15/04/2010", "descricao"=>"Salário do funcionário Eduardo Gade."}}
+  [4;36;1mConta Create (0.5ms)[0m   [0;1mINSERT INTO "contas" ("data_vencimento", "created_at", "updated_at", "tipo_conta", "valor", "data_pagamento", "descricao") VALUES(NULL, '2010-04-16 12:07:17', '2010-04-16 12:07:17', 'D', 510.0, NULL, 'Salário do funcionário Eduardo Gade.')[0m
+Redirected to http://localhost:3000/contas/1
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/contas]
+
+
+Processing ContasController#show (for 127.0.0.1 at 2010-04-16 08:07:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering contas/show
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/contas/1]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:07:17) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:07:20) [GET]
+  [4;36;1mConta Load (0.5ms)[0m   [0;1mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:07:49) [GET]
+  [4;35;1mConta Load (0.5ms)[0m   [0mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:07:57) [GET]
+  [4;36;1mConta Load (0.5ms)[0m   [0;1mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:12:44) [GET]
+  [4;35;1mConta Load (0.5ms)[0m   [0mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+ERROR: compiling _run_erb_app47views47contas47index46html46erb RAISED compile error
+/Users/guilherme/Workspace/libertas/app/views/contas/index.html.erb:14: syntax error, unexpected ')'
+....concat(( link_to receita do ).to_s); @output_buffer.concat ...
+                              ^
+/Users/guilherme/Workspace/libertas/app/views/contas/index.html.erb:21: syntax error, unexpected kEND, expecting ')'
+;  end 
+      ^
+/Users/guilherme/Workspace/libertas/app/views/contas/index.html.erb:46: syntax error, unexpected kENSURE, expecting ')'
+/Users/guilherme/Workspace/libertas/app/views/contas/index.html.erb:48: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47contas47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Lista de contas</h1>\n\n<h2>Receitas</h2>\n<table class=\"lista\">\n\t<tbody>\n\t\t"
+
+
+
+
+;  @receitas.each do |receita| ; @output_buffer.concat "\n\t\t\t<tr>\n\t\t\t\t<td>\n\t\t\t\t\t<div id=\"container\">\n\t\t\t\t\t\t<div id=\"fixtext\">\n\t\t\t\t\t\t\t"
+
+
+
+
+; @output_buffer.concat((h receita.descricao ).to_s); @output_buffer.concat "\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div id=\"fiximage\">\n\t\t\t\t\t\t\t"
+
+
+; @output_buffer.concat(( link_to receita do ).to_s); @output_buffer.concat "\n\t\t\t\t\t\t\t\t<img src=\"images/listarsmall.png\" alt=\"Listar\">\n\t\t\t\t\t\t\t"
+
+;  end 
+@output_buffer.concat "\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t"
+
+
+
+;  end 
+@output_buffer.concat "\t</tbody>\n\t<tr><th>Header</th></tr>\n\t<tr><td>Data</td></tr>\n</table>\n\n<table>\n  <tr>\n  </tr>\n\n"
+
+
+
+
+
+
+
+
+;  @contas.each do |conta| ; @output_buffer.concat "\n  <tr>\n\t\t<td>"
+
+; @output_buffer.concat((h conta.descricao ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Show', conta ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Edit', edit_conta_path(conta) ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Destroy', conta, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n  </tr>\n"
+
+;  end ; @output_buffer.concat "\n</table>\n\n<br />\n\n<p>\n\t"
+
+
+
+
+
+; @output_buffer.concat(( link_to 'Cadastrar nova conta', new_conta_path ).to_s); @output_buffer.concat "\n</p>"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/guilherme/Workspace/libertas/app/views/contas/index.html.erb:48:in `compile!'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/guilherme/Workspace/libertas/app/controllers/contas_controller.rb:7:in `index'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/guilherme/Workspace/libertas/app/views/contas/index.html.erb:14: syntax error, unexpected ')'
+....concat(( link_to receita do ).to_s); @output_buffer.concat ...
+                              ^
+/Users/guilherme/Workspace/libertas/app/views/contas/index.html.erb:21: syntax error, unexpected kEND, expecting ')'
+;  end 
+      ^
+/Users/guilherme/Workspace/libertas/app/views/contas/index.html.erb:46: syntax error, unexpected kENSURE, expecting ')'
+/Users/guilherme/Workspace/libertas/app/views/contas/index.html.erb:48: syntax error, unexpected kEND, expecting ')') on line #14 of app/views/contas/index.html.erb:
+11: 							<%=h receita.descricao %>
+12: 						</div>
+13: 						<div id="fiximage">
+14: 							<%= link_to receita do %>
+15: 								<img src="images/listarsmall.png" alt="Listar">
+16: 							<% end -%>
+17: 						</div>
+
+    app/views/contas/index.html.erb:48:in `compile!'
+    app/controllers/contas_controller.rb:7:in `index'
+
+Rendered rescues/_trace (56.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:13:15) [GET]
+  [4;36;1mConta Load (0.5ms)[0m   [0;1mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #6 of app/views/contas/index.html.erb:
+3: <h2>Receitas</h2>
+4: <table class="lista">
+5: 	<tbody>
+6: 		<% @receitas.each do |receita| %>
+7: 			<tr>
+8: 				<td>
+9: 					<div id="container">
+
+    app/views/contas/index.html.erb:6
+    app/controllers/contas_controller.rb:7:in `index'
+
+Rendered rescues/_trace (59.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:13:29) [GET]
+  [4;35;1mConta Load (0.5ms)[0m   [0mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:13:36) [GET]
+  [4;36;1mConta Load (0.5ms)[0m   [0;1mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 71ms (View: 67, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:14:33) [GET]
+  [4;35;1mConta Load (0.5ms)[0m   [0mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.any?) on line #4 of app/views/contas/index.html.erb:
+1: <h1>Lista de contas</h1>
+2: 
+3: <h2>Receitas</h2>
+4: <% if @receitas.any? %>
+5: 	<table class="lista">
+6: 		<tbody>
+7: 			<% @receitas.each do |receita| %>
+
+    app/views/contas/index.html.erb:4
+    app/controllers/contas_controller.rb:7:in `index'
+
+Rendered rescues/_trace (57.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:14:43) [GET]
+  [4;36;1mConta Load (0.5ms)[0m   [0;1mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 71ms (View: 66, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:15:16) [GET]
+  [4;35;1mConta Load (0.5ms)[0m   [0mSELECT * FROM "contas" [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:15:54) [GET]
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') LIMIT 1[0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering contas/index
+
+ActionView::TemplateError (undefined method `any?' for #<Conta:0x101facc68>) on line #31 of app/views/contas/index.html.erb:
+28: 
+29: 
+30: <h2>Despesas</h2>
+31: <% if @despesas and @despesas.any? %>
+32: 	<table class="lista">
+33: 		<tbody>
+34: 			<% @despesas.each do |despesa| %>
+
+    app/views/contas/index.html.erb:31
+    app/controllers/contas_controller.rb:7:in `index'
+
+Rendered rescues/_trace (113.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 08:16:13) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:16:13) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-04-16 08:16:40) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "conta"=>{"data_vencimento"=>"16/04/2010", "tipo_conta"=>"D", "valor"=>"5000,00", "data_pagamento"=>"15/04/2010", "descricao"=>"Salário do Funcionário Guilherme Carvalho"}}
+  [4;36;1mConta Create (0.4ms)[0m   [0;1mINSERT INTO "contas" ("data_vencimento", "created_at", "updated_at", "tipo_conta", "valor", "data_pagamento", "descricao") VALUES(NULL, '2010-04-16 12:16:40', '2010-04-16 12:16:40', 'D', 5000.0, NULL, 'Salário do Funcionário Guilherme Carvalho')[0m
+Redirected to http://localhost:3000/contas/2
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/contas]
+
+
+Processing ContasController#show (for 127.0.0.1 at 2010-04-16 08:16:40) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering contas/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/contas/2]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:16:40) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:16:43) [GET]
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') LIMIT 1[0m
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering contas/index
+
+ActionView::TemplateError (undefined method `any?' for #<Conta:0x101532fa8>) on line #31 of app/views/contas/index.html.erb:
+28: 
+29: 
+30: <h2>Despesas</h2>
+31: <% if @despesas and @despesas.any? %>
+32: 	<table class="lista">
+33: 		<tbody>
+34: 			<% @despesas.each do |despesa| %>
+
+    app/views/contas/index.html.erb:31
+    app/controllers/contas_controller.rb:7:in `index'
+
+Rendered rescues/_trace (58.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:17:46) [GET]
+  [4;36;1mConta Load (0.1ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/contas/]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:17:46) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#images to png (for 127.0.0.1 at 2010-04-16 08:17:46) [GET]
+  Parameters: {"id"=>"listarsmall"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:18:02) [GET]
+  [4;36;1mConta Load (0.1ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/contas/]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:18:02) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#images to png (for 127.0.0.1 at 2010-04-16 08:18:02) [GET]
+  Parameters: {"id"=>"listarsmall"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:18:08) [GET]
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/contas/]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:18:08) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#images to png (for 127.0.0.1 at 2010-04-16 08:18:08) [GET]
+  Parameters: {"id"=>"listarsmall"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:18:36) [GET]
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/contas/]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:18:36) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#images to png (for 127.0.0.1 at 2010-04-16 08:18:36) [GET]
+  Parameters: {"id"=>"listarsmall"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:18:49) [GET]
+  [4;36;1mConta Load (0.1ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+
+ActionView::TemplateError (undefined method `show_conta_path' for #<ActionView::Base:0x101eedf20>) on line #42 of app/views/contas/index.html.erb:
+39: 								<%=h despesa.descricao %>
+40: 							</div>
+41: 							<div id="fiximage">
+42: 								<a href="<%= show_conta_path despesa %>">
+43: 									<img src="images/listarsmall.png" alt="Listar">
+44: 								</a>
+45: 							</div>
+
+    app/views/contas/index.html.erb:42
+    app/views/contas/index.html.erb:34:in `each'
+    app/views/contas/index.html.erb:34
+    app/controllers/contas_controller.rb:7:in `index'
+
+Rendered rescues/_trace (113.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ContasController#show (for 127.0.0.1 at 2010-04-16 08:19:30) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering contas/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/contas/2]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:19:30) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:19:32) [GET]
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+
+ActionView::TemplateError (undefined method `show_path' for #<ActionView::Base:0x101da3cc8>) on line #42 of app/views/contas/index.html.erb:
+39: 								<%=h despesa.descricao %>
+40: 							</div>
+41: 							<div id="fiximage">
+42: 								<a href="<%= show_path despesa %>">
+43: 									<img src="images/listarsmall.png" alt="Listar">
+44: 								</a>
+45: 							</div>
+
+    app/views/contas/index.html.erb:42
+    app/views/contas/index.html.erb:34:in `each'
+    app/views/contas/index.html.erb:34
+    app/controllers/contas_controller.rb:7:in `index'
+
+Rendered rescues/_trace (111.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:20:12) [GET]
+  [4;35;1mConta Load (0.1ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/contas/]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:20:12) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#images to png (for 127.0.0.1 at 2010-04-16 08:20:12) [GET]
+  Parameters: {"id"=>"listarsmall"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#images to png (for 127.0.0.1 at 2010-04-16 08:20:23) [GET]
+  Parameters: {"id"=>"listarsmall"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:20:56) [GET]
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 67ms (View: 61, DB: 0) | 200 OK [http://localhost/contas/]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:20:56) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#show (for 127.0.0.1 at 2010-04-16 08:20:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering contas/show
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/contas/1]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:20:58) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:21:56) [GET]
+  [4;36;1mConta Load (0.1ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/contas/]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:21:56) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:21:57) [GET]
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/contas/]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:21:57) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:21:58) [GET]
+  [4;36;1mConta Load (0.1ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/contas/]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:21:58) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:21:58) [GET]
+  [4;36;1mConta Load (0.1ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/contas/]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:21:58) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:22:59) [GET]
+  [4;36;1mConta Load (0.1ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/contas/]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:22:59) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:23:00) [GET]
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 59ms (View: 52, DB: 0) | 200 OK [http://localhost/contas/]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:23:00) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:23:00) [GET]
+  [4;36;1mConta Load (0.1ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/contas/]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:23:00) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:23:00) [GET]
+  [4;36;1mConta Load (0.1ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/contas/]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:23:00) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:23:00) [GET]
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://localhost/contas/]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:23:00) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:23:21) [GET]
+  [4;36;1mConta Load (0.1ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+
+ActionView::TemplateError (undefined local variable or method `receita' for #<ActionView::Base:0x102329198>) on line #51 of app/views/contas/index.html.erb:
+48: 								<a href="<%= conta_path despesa %>">
+49: 									<img src="/images/listarsmall.png" alt="Listar">
+50: 								</a>
+51: 								<a href="<%= edit_conta_path receita %>">
+52: 									<img src="/images/atualizarsmall.png" alt="Listar">
+53: 								</a>
+54: 								<a href="<%= delete_conta_path receita %>">
+
+    app/views/contas/index.html.erb:51
+    app/views/contas/index.html.erb:40:in `each'
+    app/views/contas/index.html.erb:40
+    app/controllers/contas_controller.rb:7:in `index'
+
+Rendered rescues/_trace (58.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:23:29) [GET]
+  [4;36;1mConta Load (0.1ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+
+ActionView::TemplateError (undefined method `delete_conta_path' for #<ActionView::Base:0x10110f458>) on line #54 of app/views/contas/index.html.erb:
+51: 								<a href="<%= edit_conta_path despesa %>">
+52: 									<img src="/images/atualizarsmall.png" alt="Listar">
+53: 								</a>
+54: 								<a href="<%= delete_conta_path despesa %>">
+55: 									<img src="/images/removersmall.png" alt="Listar">
+56: 								</a>
+57: 							</div>
+
+    app/views/contas/index.html.erb:54
+    app/views/contas/index.html.erb:40:in `each'
+    app/views/contas/index.html.erb:40
+    app/controllers/contas_controller.rb:7:in `index'
+
+Rendered rescues/_trace (58.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:24:55) [GET]
+  [4;36;1mConta Load (0.1ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+
+ActionView::TemplateError (undefined method `destroy_conta_path' for #<ActionView::Base:0x1015a0558>) on line #54 of app/views/contas/index.html.erb:
+51: 								<a href="<%= edit_conta_path despesa %>">
+52: 									<img src="/images/atualizarsmall.png" alt="Listar">
+53: 								</a>
+54: 								<a href="<%= destroy_conta_path despesa %>">
+55: 									<img src="/images/removersmall.png" alt="Listar">
+56: 								</a>
+57: 							</div>
+
+    app/views/contas/index.html.erb:54
+    app/views/contas/index.html.erb:40:in `each'
+    app/views/contas/index.html.erb:40
+    app/controllers/contas_controller.rb:7:in `index'
+
+Rendered rescues/_trace (60.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:24:56) [GET]
+  [4;36;1mConta Load (0.1ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+
+ActionView::TemplateError (undefined method `destroy_conta_path' for #<ActionView::Base:0x10180e010>) on line #54 of app/views/contas/index.html.erb:
+51: 								<a href="<%= edit_conta_path despesa %>">
+52: 									<img src="/images/atualizarsmall.png" alt="Listar">
+53: 								</a>
+54: 								<a href="<%= destroy_conta_path despesa %>">
+55: 									<img src="/images/removersmall.png" alt="Listar">
+56: 								</a>
+57: 							</div>
+
+    app/views/contas/index.html.erb:54
+    app/views/contas/index.html.erb:40:in `each'
+    app/views/contas/index.html.erb:40
+    app/controllers/contas_controller.rb:7:in `index'
+
+Rendered rescues/_trace (117.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:24:56) [GET]
+  [4;36;1mConta Load (0.1ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+
+ActionView::TemplateError (undefined method `destroy_conta_path' for #<ActionView::Base:0x101d71318>) on line #54 of app/views/contas/index.html.erb:
+51: 								<a href="<%= edit_conta_path despesa %>">
+52: 									<img src="/images/atualizarsmall.png" alt="Listar">
+53: 								</a>
+54: 								<a href="<%= destroy_conta_path despesa %>">
+55: 									<img src="/images/removersmall.png" alt="Listar">
+56: 								</a>
+57: 							</div>
+
+    app/views/contas/index.html.erb:54
+    app/views/contas/index.html.erb:40:in `each'
+    app/views/contas/index.html.erb:40
+    app/controllers/contas_controller.rb:7:in `index'
+
+Rendered rescues/_trace (116.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:26:57) [GET]
+  [4;36;1mConta Load (0.1ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/contas/]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:26:57) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#destroy (for 127.0.0.1 at 2010-04-16 08:27:04) [DELETE]
+  Parameters: {"authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "id"=>"1"}
+  [4;36;1mConta Load (0.4ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."id" = 1) [0m
+  [4;35;1mConta Destroy (19.4ms)[0m   [0mDELETE FROM "contas" WHERE "id" = 1[0m
+Redirected to http://localhost:3000/contas
+Completed in 32ms (DB: 20) | 302 Found [http://localhost/contas/1]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:27:04) [GET]
+  [4;36;1mConta Load (0.1ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:27:35) [GET]
+  [4;36;1mConta Load (0.1ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#edit (for 127.0.0.1 at 2010-04-16 08:27:36) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering contas/edit
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/contas/2/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-16 08:27:36) [GET]
+
+ActionController::RoutingError (No route matches "/contas/2/images/logo_libertas.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#edit (for 127.0.0.1 at 2010-04-16 08:30:01) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering contas/edit
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/contas/2/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-16 08:30:01) [GET]
+
+ActionController::RoutingError (No route matches "/contas/2/images/logo_libertas.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:30:04) [GET]
+  [4;36;1mConta Load (0.1ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 08:30:06) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:30:06) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-04-16 08:30:39) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "conta"=>{"data_vencimento"=>"12/04/2010", "tipo_conta"=>"R", "valor"=>"75,00", "data_pagamento"=>"13/04/2010", "descricao"=>"Pagamento da Consulta de Eduardo Gade"}}
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 25ms (View: 15, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-04-16 08:30:56) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "conta"=>{"data_vencimento"=>"12/04/2010", "tipo_conta"=>"R", "valor"=>"75,00", "data_pagamento"=>"13/04/2010", "descricao"=>"Pagamento da Consulta de Eduardo Gade"}}
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 24ms (View: 15, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-04-16 08:32:00) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "conta"=>{"data_vencimento"=>"12/04/2010", "tipo_conta"=>"R", "valor"=>"75,00", "data_pagamento"=>"13/04/2010", "descricao"=>"Pagamento da Consulta de Eduardo Gade"}}
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 27ms (View: 16, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-04-16 08:33:25) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "conta"=>{"data_vencimento"=>"12/04/2010", "tipo_conta"=>"R", "valor"=>"75,00", "data_pagamento"=>"13/04/2010", "descricao"=>"Pagamento da Consulta de Eduardo Gade"}}
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 70ms (View: 11, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-04-16 08:33:44) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "conta"=>{"data_vencimento"=>"12/04/2010", "tipo_conta"=>"R", "valor"=>"75,00", "data_pagamento"=>"13/04/2010", "descricao"=>"Pagamento da Consulta de Eduardo Gade"}}
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 19ms (View: 11, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-04-16 08:33:59) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "conta"=>{"data_vencimento"=>"12/04/2010", "tipo_conta"=>"R", "valor"=>"75,00", "data_pagamento"=>"", "descricao"=>"Pagamento da Consulta de Eduardo Gade"}}
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-04-16 08:34:13) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "conta"=>{"data_vencimento"=>"12/04/2010", "tipo_conta"=>"R", "valor"=>"75,00", "data_pagamento"=>"12/04/2010", "descricao"=>"Pagamento da Consulta de Eduardo Gade"}}
+  [4;36;1mConta Create (0.4ms)[0m   [0;1mINSERT INTO "contas" ("data_vencimento", "created_at", "updated_at", "tipo_conta", "valor", "data_pagamento", "descricao") VALUES('2010-12-04', '2010-04-16 12:34:13', '2010-04-16 12:34:13', 'R', 75.0, '2010-12-04', 'Pagamento da Consulta de Eduardo Gade')[0m
+Redirected to http://localhost:3000/contas/3
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/contas]
+
+
+Processing ContasController#show (for 127.0.0.1 at 2010-04-16 08:34:13) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering contas/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/contas/3]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:34:13) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:35:59) [GET]
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 71ms (View: 9, DB: 1) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 08:36:02) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:36:02) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-04-16 08:36:18) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "conta"=>{"data_vencimento"=>"12/04/2100", "tipo_conta"=>"R", "valor"=>"10", "data_pagamento"=>"15/10/1201", "descricao"=>"Bla"}}
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 23ms (View: 14, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:40:48) [GET]
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#edit (for 127.0.0.1 at 2010-04-16 08:40:51) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering contas/edit
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/contas/2/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-16 08:40:51) [GET]
+
+ActionController::RoutingError (No route matches "/contas/2/images/logo_libertas.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:43:49) [GET]
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 08:43:51) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:43:51) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-04-16 08:44:21) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "conta"=>{"data_vencimento"=>"28/03/1949", "tipo_conta"=>"R", "valor"=>"150,00", "data_pagamento"=>"29/03/2005", "descricao"=>"Teste"}}
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 23ms (View: 14, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-04-16 08:44:33) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "conta"=>{"data_vencimento"=>"28/03/1949", "tipo_conta"=>"R", "valor"=>"150,00", "data_pagamento"=>"29/03/2005", "descricao"=>"Teste"}}
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 71ms (View: 63, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-04-16 08:45:01) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "conta"=>{"data_vencimento"=>"28/03/1949", "tipo_conta"=>"R", "valor"=>"150,00", "data_pagamento"=>"29/03/2005", "descricao"=>"Teste"}}
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 22ms (View: 13, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-04-16 08:48:06) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "conta"=>{"data_vencimento"=>"28/03/1949", "tipo_conta"=>"R", "valor"=>"150,00", "data_pagamento"=>"29/03/2005", "descricao"=>"Teste"}}
+
+SyntaxError (/Users/guilherme/Workspace/libertas/app/models/conta.rb:12: syntax error, unexpected '=', expecting kEND
+      self.erros.on(:data_pagamento) = 'is invalid'
+                                      ^
+/Users/guilherme/Workspace/libertas/app/models/conta.rb:19: syntax error, unexpected '=', expecting kEND
+      self.erros.on(:data_vencimento) = 'is invalid'
+                                       ^):
+  app/controllers/contas_controller.rb:43:in `create'
+
+Rendered rescues/_trace (49.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-04-16 08:49:13) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "conta"=>{"data_vencimento"=>"28/03/1949", "tipo_conta"=>"R", "valor"=>"150,00", "data_pagamento"=>"29/03/2005", "descricao"=>"Teste"}}
+
+NoMethodError (undefined method `erros' for #<Conta:0x1010b2d48>):
+  app/models/conta.rb:12:in `transformar_datas'
+  app/controllers/contas_controller.rb:44:in `create'
+
+Rendered rescues/_trace (43.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-04-16 08:49:23) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "conta"=>{"data_vencimento"=>"28/03/1949", "tipo_conta"=>"R", "valor"=>"150,00", "data_pagamento"=>"29/03/2005", "descricao"=>"Teste"}}
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 27ms (View: 17, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-04-16 08:49:26) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "conta"=>{"data_vencimento"=>"28/03/1949", "tipo_conta"=>"R", "valor"=>"150,00", "data_pagamento"=>"29/03/2005", "descricao"=>"Teste"}}
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 22ms (View: 14, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-04-16 08:49:54) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "conta"=>{"data_vencimento"=>"28/03/1949", "tipo_conta"=>"R", "valor"=>"150,00", "data_pagamento"=>"29/03/2005", "descricao"=>"Teste"}}
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 23ms (View: 14, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-04-16 08:50:20) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "conta"=>{"data_vencimento"=>"28/03/1949", "tipo_conta"=>"R", "valor"=>"150,00", "data_pagamento"=>"29/03/2005", "descricao"=>"Teste"}}
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 24ms (View: 13, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-04-16 08:51:54) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "conta"=>{"data_vencimento"=>"28/03/1949", "tipo_conta"=>"R", "valor"=>"150,00", "data_pagamento"=>"29/03/2005", "descricao"=>"Teste"}}
+WARNING: Can't mass-assign these protected attributes: data_vencimento, data_pagamento
+  [4;35;1mConta Create (19.4ms)[0m   [0mINSERT INTO "contas" ("data_vencimento", "created_at", "updated_at", "tipo_conta", "valor", "data_pagamento", "descricao") VALUES('2005-03-29', '2010-04-16 12:51:54', '2010-04-16 12:51:54', 'R', 150.0, '1949-03-28', 'Teste')[0m
+Redirected to http://localhost:3000/contas/4
+Completed in 33ms (DB: 19) | 302 Found [http://localhost/contas]
+
+
+Processing ContasController#show (for 127.0.0.1 at 2010-04-16 08:51:54) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering contas/show
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/contas/4]
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:51:54) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#images to gif (for 127.0.0.1 at 2010-04-16 08:52:40) [GET]
+  Parameters: {"id"=>"logo_libertas"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContasController#show (for 127.0.0.1 at 2010-04-16 08:52:48) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering contas/show
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/contas/4]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:52:50) [GET]
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:55:33) [GET]
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#show (for 127.0.0.1 at 2010-04-16 08:55:34) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering contas/show
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/contas/3]
+
+
+Processing ContasController#show (for 127.0.0.1 at 2010-04-16 08:57:11) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering contas/show
+
+ActionView::TemplateError (private method `split' called for Sat, 04 Dec 2010:Date) on line #17 of app/views/contas/show.html.erb:
+14: 		<% end -%>
+15: 	</dd>
+16: 	<dt>Data de Vencimento</dt>
+17: 	<dd><%= formatar_data(@conta.data_vencimento) %></dd>
+18: 	<dt>Data de Pagamento</dt>
+19: 	<dd><%= formatar_data(@conta.data_pagamento) %></dd>
+20: </dl>
+
+    app/helpers/contas_helper.rb:4:in `formatar_data'
+    app/views/contas/show.html.erb:17
+    app/controllers/contas_controller.rb:18:in `show'
+
+Rendered rescues/_trace (58.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ContasController#show (for 127.0.0.1 at 2010-04-16 08:57:23) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering contas/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/contas/3]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:57:42) [GET]
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#destroy (for 127.0.0.1 at 2010-04-16 08:57:46) [DELETE]
+  Parameters: {"authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "id"=>"4"}
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."id" = 4) [0m
+  [4;36;1mConta Destroy (0.3ms)[0m   [0;1mDELETE FROM "contas" WHERE "id" = 4[0m
+Redirected to http://localhost:3000/contas
+Completed in 10ms (DB: 1) | 302 Found [http://localhost/contas/4]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 08:57:46) [GET]
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#destroy (for 127.0.0.1 at 2010-04-16 09:00:01) [DELETE]
+  Parameters: {"authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "id"=>"3"}
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."id" = 3) [0m
+  [4;36;1mConta Destroy (0.3ms)[0m   [0;1mDELETE FROM "contas" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/contas
+Completed in 10ms (DB: 1) | 302 Found [http://localhost/contas/3]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 09:00:01) [GET]
+  [4;35;1mConta Load (0.1ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#edit (for 127.0.0.1 at 2010-04-16 09:00:04) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering contas/edit
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/contas/2/edit]
+
+
+Processing ContasController#edit (for 127.0.0.1 at 2010-04-16 09:01:11) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering contas/edit
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/contas/2/edit]
+
+
+Processing ContasController#edit (for 127.0.0.1 at 2010-04-16 09:01:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering contas/edit
+Completed in 61ms (View: 56, DB: 0) | 200 OK [http://localhost/contas/2/edit]
+
+
+Processing ContasController#edit (for 127.0.0.1 at 2010-04-16 09:01:18) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering contas/edit
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/contas/2/edit]
+
+
+Processing ContasController#edit (for 127.0.0.1 at 2010-04-16 09:01:18) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering contas/edit
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/contas/2/edit]
+
+
+Processing ContasController#edit (for 127.0.0.1 at 2010-04-16 09:01:18) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering contas/edit
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/contas/2/edit]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 09:01:27) [GET]
+  [4;35;1mConta Load (0.1ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#edit (for 127.0.0.1 at 2010-04-16 09:01:29) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering contas/edit
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/contas/2/edit]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 09:01:30) [GET]
+  [4;36;1mConta Load (0.1ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 60ms (View: 54, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#destroy (for 127.0.0.1 at 2010-04-16 09:01:32) [DELETE]
+  Parameters: {"authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "id"=>"2"}
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."id" = 2) [0m
+  [4;35;1mConta Destroy (99.2ms)[0m   [0mDELETE FROM "contas" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/contas
+Completed in 109ms (DB: 99) | 302 Found [http://localhost/contas/2]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 09:01:33) [GET]
+  [4;36;1mConta Load (0.1ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.1ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-04-16 09:01:34) [GET]
+Rendering template within layouts/application
+Rendering contas/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/contas/new]
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-04-16 09:01:48) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"fLJiaAtiM7Ck8IK70wRO2YpxnIk6FIqVmkFXZ4jTnF4=", "conta"=>{"data_vencimento"=>"12/04/2010", "tipo_conta"=>"R", "valor"=>"5000,00", "data_pagamento"=>"15/10/1201", "descricao"=>"Salário de Guilherme"}}
+WARNING: Can't mass-assign these protected attributes: data_vencimento, data_pagamento
+  [4;36;1mConta Create (0.4ms)[0m   [0;1mINSERT INTO "contas" ("data_vencimento", "created_at", "updated_at", "tipo_conta", "valor", "data_pagamento", "descricao") VALUES('1201-10-15', '2010-04-16 13:01:48', '2010-04-16 13:01:48', 'R', 5000.0, '2010-04-12', 'Salário de Guilherme')[0m
+Redirected to http://localhost:3000/contas/5
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/contas]
+
+
+Processing ContasController#show (for 127.0.0.1 at 2010-04-16 09:01:48) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering contas/show
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/contas/5]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 09:01:52) [GET]
+  [4;36;1mConta Load (0.6ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.1ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#edit (for 127.0.0.1 at 2010-04-16 09:01:54) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering contas/edit
+Completed in 59ms (View: 55, DB: 0) | 200 OK [http://localhost/contas/5/edit]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 09:02:03) [GET]
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;36;1mConta Load (0.1ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#show (for 127.0.0.1 at 2010-04-16 09:02:05) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mConta Load (0.2ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering contas/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/contas/5]
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-04-16 09:02:19) [GET]
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'R') [0m
+  [4;35;1mConta Load (0.1ms)[0m   [0mSELECT * FROM "contas" WHERE ("contas"."tipo_conta" = 'D') [0m
+Rendering template within layouts/application
+Rendering contas/index
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/contas]
+
+
+Processing ContasController#show (for 127.0.0.1 at 2010-04-16 09:03:00) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM "contas" WHERE ("contas"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering contas/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/contas/5]

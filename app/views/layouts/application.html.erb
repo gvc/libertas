@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Libertas</title>
+	<%= stylesheet_link_tag 'formularios' %>
+	<%= stylesheet_link_tag 'aplicacao' %>
+	<%= stylesheet_link_tag 'lra' %>
+</head>
+<body id="formulario">
+    <div id="topo">
+        <img src="/images/logo_libertas.gif" alt="Libertas"/>
+    </div>
+   	<ul id="menu">
+        <li><a href="listar_consultas.html">Consultas</a></li>
+        <li><a href="listar_pacientes.html">Pacientes</a></li>
+        <li><a href="listar_funcionarios.html">Funcionários</a></li>
+        <li><%= link_to 'Contas', contas_path %></li>
+		<li><a href="relatorios.html">Relatórios</a></li>
+		<li><a href="index.html">Deslogar</a></li>
+    </ul>
+    <div id="conteudo">
+			<div id="coluna-principal">
+				<% if flash[:notice] %>
+					<div class="sucesso">
+						<p><%= flash[:notice] %></p>
+					</div>
+				<% end -%>
+				
+				<%= yield %>
+			</div>
+		</div>
+		<div id="rodape">
+			&copy; 2010. Libertas.
+		</div>
+		
+	</div>
+</body>
+</html>

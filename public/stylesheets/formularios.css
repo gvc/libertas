@@ -1,0 +1,184 @@
+.cadastro {
+	width: 510px;
+}
+
+.cadastro > DIV {
+	float: left;
+	margin-bottom: 5px;
+	margin-right: 10px;
+}
+
+.cadastro > DIV.primeiro {
+	clear: both;
+}
+
+.cadastro LABEL {
+	display: block;
+}
+
+.cadastro INPUT {
+	font-size: 12px;
+	padding: 2px 3px;
+}
+
+.cadastro TEXTAREA {
+	font: 12px/1.25 Consolas, "Courier New", monospace;
+	padding: 4px 4px;
+}
+
+.cadastro .botoes {
+	margin-top: 10px;
+}
+
+.cadastro .botoes BUTTON {
+	font-size: 12px;
+}
+
+.cadastro .botoes A {
+	font-size: 11px;
+}
+
+.cadastro .botoes BUTTON,
+.cadastro .botoes A {
+	margin-right: 5px;
+}
+
+.cadastro .importante INPUT {
+	font-size: 16px;
+}
+
+
+/***********************
+  COMPRIMENTOS
+************************/
+
+.comprimento-1 INPUT[type=text],
+.comprimento-1 INPUT[type=password],
+.comprimento-1 TEXTAREA {
+	width: 20px;
+}
+
+.comprimento-2 INPUT[type=text],
+.comprimento-2 INPUT[type=password],
+.comprimento-2 TEXTAREA {
+	width: 60px;
+}
+
+.comprimento-3 INPUT[type=text],
+.comprimento-3 INPUT[type=password],
+.comprimento-3 TEXTAREA {
+	width: 100px;
+}
+
+.comprimento-4 INPUT[type=text],
+.comprimento-4 INPUT[type=password],
+.comprimento-4 TEXTAREA {
+	width: 140px;
+}
+
+.comprimento-5 INPUT[type=text],
+.comprimento-5 INPUT[type=password],
+.comprimento-5 TEXTAREA {
+	width: 180px;
+}
+
+.comprimento-6 INPUT[type=text],
+.comprimento-6 INPUT[type=password],
+.comprimento-6 TEXTAREA {
+	width: 220px;
+}
+
+.comprimento-7 INPUT[type=text],
+.comprimento-7 INPUT[type=password],
+.comprimento-7 TEXTAREA {
+	width: 260px;
+}
+
+.comprimento-8 INPUT[type=text],
+.comprimento-8 INPUT[type=password],
+.comprimento-8 TEXTAREA {
+	width: 300px;
+}
+
+.comprimento-9 INPUT[type=text],
+.comprimento-9 INPUT[type=password],
+.comprimento-9 TEXTAREA {
+	width: 340px;
+}
+.comprimento-10 INPUT[type=text],
+.comprimento-10 INPUT[type=password],
+.comprimento-10 TEXTAREA {
+	width: 380px;
+}
+
+.comprimento-11 INPUT[type=text],
+.comprimento-11 INPUT[type=password],
+.comprimento-11 TEXTAREA {
+	width: 420px;
+}
+
+.comprimento-12 INPUT[type=text],
+.comprimento-12 INPUT[type=password],
+.comprimento-12 TEXTAREA {
+	width: 460px;
+}
+
+.cadastro DIV.comprimento-1,
+.comprimento-1 SELECT {
+	width: 30px;
+}
+
+.cadastro DIV.comprimento-2,
+.comprimento-2 SELECT {
+	width: 70px;
+}
+
+.cadastro DIV.comprimento-3,
+.comprimento-3 SELECT {
+	width: 110px;
+}
+
+.cadastro DIV.comprimento-4,
+.comprimento-4 SELECT {
+	width: 150px;
+}
+
+.cadastro DIV.comprimento-5,
+.comprimento-5 SELECT {
+	width: 190px;
+}
+
+.cadastro DIV.comprimento-6,
+.comprimento-6 SELECT {
+	width: 230px;
+}
+
+.cadastro DIV.comprimento-7,
+.comprimento-7 SELECT {
+	width: 270px;
+}
+
+.cadastro DIV.comprimento-8,
+.comprimento-8 SELECT {
+	width: 310px;
+}
+
+.cadastro DIV.comprimento-9,
+.comprimento-9 SELECT {
+	width: 350px;
+}
+
+.cadastro DIV.comprimento-10,
+.comprimento-10 SELECT {
+	width: 390px;
+}
+
+.cadastro DIV.comprimento-11,
+.comprimento-11 SELECT {
+	width: 430px;
+}
+
+.cadastro DIV.comprimento-12,
+.comprimento-12 SELECT {
+	width: 470px;
+}

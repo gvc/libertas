@@ -1,0 +1,136 @@
+BODY {
+	color: #333333;
+	font: 14px/1.5 Arial, sans-serif;
+}
+
+A:link, A:visited {
+	color: #296eb3;
+}
+
+.sucesso {
+	background-color: #ACE1AF;
+	border: 1px solid #138808;
+	padding: 3px 5px;
+	margin: auto 25%;
+	text-align: center;
+}
+
+.sucesso P {
+	margin: 0;
+}
+
+/***********************
+  LAYOUT
+************************/
+#topo,
+#menu,
+#conteudo,
+#rodape {
+	clear: both;
+	margin: auto;
+	width: 930px;
+	padding: 10px;
+}
+
+/***********************
+  TOPO
+************************/
+#topo {
+	border-bottom: 1px solid #cccccc;
+}
+
+/***********************
+  MENU
+************************/
+UL#menu {
+	border-bottom: 1px solid #cccccc;
+	list-style: none;
+	padding-top: 0;
+	padding-bottom: 0;
+	overflow: hidden;
+}
+
+UL#menu LI {
+	font-size: 16px;
+	float: left;
+	margin: 0;
+	margin-right: 10px;
+}
+
+UL#menu LI A {
+	color: #83440E;
+	display: block;
+	padding: 7px 10px 5px;
+	text-decoration: none;
+}
+
+UL#menu LI A:hover {
+	background-color: #fadbc0;
+}
+
+/***********************
+  CONTEUDO
+************************/
+#coluna-principal {
+	margin: 0 40px;
+}
+
+/***********************
+  RODAPÉ
+************************/
+#rodape {
+	font-size: 11px;
+	padding: 5px 10px;
+	text-align: center;
+}
+
+.calendario TH {
+	width: 200px;
+	background-color: rgb(244,142,4);
+	color: #eeeeee;
+}
+
+.calendario TD {
+	height: 35px;
+	text-align: center;
+}
+
+.calendario .first {
+	font-weight: bold;
+	width: 150px;
+}
+
+.calendario TD.livre {
+	background-color: #ACE1AF;
+}
+
+.calendario TD.ocupado {
+	background-color: #E1ACAF;
+}
+
+.calendario TD.indisponivel {
+	background-color: silver;
+}
+
+.opcoes-calendario a {
+	display: block;
+}
+
+.opcoes-calendario a.anterior {
+	float: left;
+	text-align: left;
+}
+
+.opcoes-calendario a.proxima {
+	float: right;
+	text-align: right;
+}
+
+/*PARA SER REMOVIDO*/
+#calendario-wrapper {
+	display: none;
+}
+
+.fieldWithErrors label {
+	color: red;
+}

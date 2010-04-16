@@ -1,0 +1,55 @@
+
+.lista {
+
+       width: 80%;
+       border-width: 1px;
+       border-style: solid none none none;
+       border-color: rgb(244,110,4);
+
+}
+
+.lista td {
+
+       border-width: 1px;
+       border-style: none none solid none;
+       border-color: rgb(244,110,4);
+
+}
+
+.lista A {
+
+       text-decoration: none;
+       padding-right: 10px;
+
+}
+
+A IMG{
+
+       border-width: 0;
+
+}
+
+#container {
+
+        position: relative;
+        height: 27px;
+
+}
+
+#fixtext {
+
+        position: relative;
+        width: 80%;
+        left: 20px;
+        top: 12%;
+
+}
+
+#fiximage {
+
+        position: relative;
+        width: 200px;
+        top: -16px;
+        left: 82%;
+
+}
