@@ -1,0 +1,15 @@
+<h1>Atualizar Paciente</h1>
+
+<% form_for(@paciente, :html => {:class => 'cadastro'}) do |f| %>
+  <%= f.error_messages %>
+	
+  <% f.fields_for :pessoa do |pessoa_builder| %>
+  	<%= render 'campos_pessoa', :f => pessoa_builder %>
+  <% end %>	
+
+  <div class="botoes primeiro">
+    <%= f.submit 'Atualizar' %>
+		ou
+		<%= link_to 'cancelar', pacientes_path %>
+  </div>
+<% end %>

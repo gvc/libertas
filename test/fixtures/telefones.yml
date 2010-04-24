@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  pessoa_id: 1
+  codigo_area: MyString
+  telefone: MyString
+  is_celular: false
+
+two:
+  pessoa_id: 1
+  codigo_area: MyString
+  telefone: MyString
+  is_celular: false

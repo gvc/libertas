@@ -1,0 +1,28 @@
+<div class="comprimento-12 primeiro">
+	<%= f.label :rua, 'Logradouro*' %>
+	<%= f.text_field :rua %>
+</div>
+
+<div class="comprimento-4 primeiro">
+	<%= f.label :bairro, 'Bairro*' %>
+	<%= f.text_field :bairro %>
+</div>
+
+<div class="comprimento-4">
+	<%= f.label :cidade, 'Cidade*' %>
+	<%= f.text_field :cidade %>
+</div>
+
+<div class="comprimento-4">
+	<%= f.label :estado, 'Estado*' %>
+	<% if @paciente.pessoa.endereco.estado == nil %>
+		<%= select_tag :estado, grouped_options_for_select(@paciente.pessoa.endereco.lista_estados, 'Pernambuco') %>
+	<% else %>
+		<%= select_tag :estado, grouped_options_for_select(@paciente.pessoa.endereco.lista_estados, @paciente.pessoa.endereco.estado) %>
+	<% end %>
+</div>
+
+<div class="comprimento-4 primeiro">
+	<%= f.label :cep, 'CEP' %>
+	<%= f.text_field :cep %>
+</div>

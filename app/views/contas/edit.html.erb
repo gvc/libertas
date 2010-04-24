@@ -23,13 +23,19 @@
 	</div>
 	<div class="comprimento-4">
 		<%= f.label :data_vencimento, 'Data de vencimento' %>
-		<%= f.text_field :data_vencimento, :maxlength => 10,
-		 		:value => formatar_data(@conta.data_vencimento) %>
+		<% if @conta.data_vencimento == nil %>
+			<%= f.text_field :data_vencimento, :maxlength => 10, :onkeypress => "mascara(this,mdata)" %>
+		<% else %>
+			<%= f.text_field :data_vencimento, :maxlength => 10, :value => formatar_data(@conta.data_vencimento), :onkeypress => "mascara(this,mdata)" %>
+		<% end -%>
 	</div>
 	<div class="comprimento-4">
 		<%= f.label :data_pagamento, 'Data de pagamento' %>
-		<%= f.text_field :data_pagamento, :maxlength => 10, 
-				:value => formatar_data(@conta.data_pagamento) %>
+		<% if @conta.data_pagamento == nil %>
+			<%= f.text_field :data_pagamento, :maxlength => 10, :onkeypress => "mascara(this,mdata)" %>
+		<% else %>
+			<%= f.text_field :data_pagamento, :maxlength => 10, :value => formatar_data(@conta.data_pagamento), :onkeypress => "mascara(this,mdata)" %>
+		<% end -%>
 	</div>
   <div class="botoes primeiro">
     <%= f.submit 'Atualizar' %>

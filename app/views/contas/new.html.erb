@@ -23,11 +23,11 @@
 	</div>
 	<div class="comprimento-4">
 		<%= f.label :data_vencimento, 'Data de vencimento' %>
-		<%= f.text_field :data_vencimento, :maxlength => 10 %>
+		<%= f.text_field :data_vencimento, :maxlength => 10, :onkeypress => "mascara(this,mdata)" %>
 	</div>
 	<div class="comprimento-4">
 		<%= f.label :data_pagamento, 'Data de pagamento' %>
-		<%= f.text_field :data_pagamento, :maxlength => 10 %>
+		<%= f.text_field :data_pagamento, :maxlength => 10, :onkeypress => "mascara(this,mdata)" %>
 	</div>
   <div class="botoes primeiro">
     <%= f.submit 'Enviar' %>

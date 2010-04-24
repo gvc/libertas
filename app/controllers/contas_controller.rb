@@ -41,9 +41,10 @@ class ContasController < ApplicationController
   # POST /contas.xml
   def create
     @conta = Conta.new(params[:conta])
-    @conta.transformar_datas params[:conta][:data_vencimento], params[:conta][:data_pagamento]
+    data_valida = @conta.transformar_datas params[:conta][:data_vencimento], params[:conta][:data_pagamento]
+    
     respond_to do |format|
-      if @conta.save
+      if data_valida && @conta.save
         flash[:notice] = 'Conta cadastrada com sucesso.'
         format.html { redirect_to(@conta) }
         format.xml  { render :xml => @conta, :status => :created, :location => @conta }
@@ -58,9 +59,10 @@ class ContasController < ApplicationController
   # PUT /contas/1.xml
   def update
     @conta = Conta.find(params[:id])
-    @conta.transformar_datas
+    data_valida = @conta.transformar_datas params[:conta][:data_vencimento], params[:conta][:data_pagamento]
+    
     respond_to do |format|
-      if @conta.update_attributes(params[:conta])
+      if data_valida && @conta.update_attributes(params[:conta])
         flash[:notice] = 'Conta atualizada com sucesso.'
         format.html { redirect_to(@conta) }
         format.xml  { head :ok }

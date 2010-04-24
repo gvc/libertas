@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  pessoa_id: 1
+  rua: MyText
+  cidade: MyText
+  bairro: MyText
+  estado: MyText
+  cep: MyString
+
+two:
+  pessoa_id: 1
+  rua: MyText
+  cidade: MyText
+  bairro: MyText
+  estado: MyText
+  cep: MyString

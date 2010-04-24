@@ -1,0 +1,58 @@
+<div class="comprimento-12 importante primeiro">
+	<%= f.label :nome, 'Nome*' %>
+	<%= f.text_field :nome %>
+</div>
+
+<% f.fields_for :endereco do |endereco_builder| %>
+	<%= render 'campos_endereco', :f => endereco_builder %>
+<% end %>
+
+<% f.fields_for :telefones do |telefones_builder| %>
+	<%= render 'campos_telefones', :f => telefones_builder %>
+<% end %>
+
+<div class="comprimento-4">
+	Sexo*
+	<label>
+		<%= f.radio_button :sexo, 'M' %>
+		Masculino
+	</label>
+	<label>
+		<%= f.radio_button :sexo, 'F' %>
+		Feminino
+	</label>
+</div>
+
+<div class="comprimento-4">
+	<%= f.label :data_nascimento, 'Data de Nascimento*' %>
+	<% if @paciente.pessoa.data_nascimento == nil %>
+		<%= f.text_field :data_nascimento, :maxlength => 10, :onkeypress => "mascara(this,mdata)" %>
+	<% else %>
+		<%= f.text_field :data_nascimento, :maxlength => 10, :value => formatar_data(@paciente.pessoa.data_nascimento), :onkeypress => "mascara(this,mdata)" %>
+	<% end -%>
+</div>  
+
+<div class="comprimento-4 primeiro">
+	<%= f.label :email, 'Email*' %>
+	<%= f.text_field :email %>
+</div>        
+
+<div class="comprimento-4">
+	<%= f.label :login, 'Login*' %>
+	<%= f.text_field :login %>
+</div>
+
+<div class="comprimento-4">
+	<%= f.label :cpf, 'CPF' %>
+	<%= f.text_field :cpf %>
+</div>
+
+<div class="comprimento-4 primeiro">
+	<%= f.label :senha, 'Senha*' %>
+	<%= f.password_field :senha %>
+</div> 
+
+<div class="comprimento-4">
+	<%= f.label :conf_senha, 'Confirmar Senha*' %>
+	<%= f.password_field :conf_senha %>
+</div>

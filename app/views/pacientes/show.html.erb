@@ -1,0 +1,46 @@
+<h1>Visualizar paciente</h1>
+
+<dl>
+	<dt>Nome</dt>
+	<dd><%= @paciente.pessoa.nome %></dd>
+	
+	<dt>Sexo</dt>
+	<dd><%= @paciente.pessoa.sexo %></dd>
+	
+	<dt>Data de Nascimento</dt>
+	<dd><%= formatar_data(@paciente.pessoa.data_nascimento) %></dd>
+	
+	<dt>Rua</dt>
+	<dd><%= @paciente.pessoa.endereco.rua %></dd>
+	
+	<dt>Bairro</dt>
+	<dd><%= @paciente.pessoa.endereco.bairro %></dd>
+	
+	<dt>Cidade</dt>
+	<dd><%= @paciente.pessoa.endereco.cidade %></dd>
+		
+	<dt>Estado</dt>
+	<dd><%= @paciente.pessoa.endereco.estado %></dd>
+	
+	<dt>CEP</dt>
+	<dd><%= @paciente.pessoa.endereco.cep %></dd>
+	
+	<dt>Telefone</dt>
+	<dd><%= formatar_telefone(@paciente.pessoa.telefones[0]) %></dd>
+	
+	<dt>Celular</dt>
+	<dd><%= formatar_telefone(@paciente.pessoa.telefones[1]) %></dd>
+	
+	<dt>CPF</dt>
+	<dd><%= @paciente.pessoa.cpf %></dd>
+	
+	<dt>Email</dt>
+	<dd><%= @paciente.pessoa.email %></dd>
+	
+	<dt>Login</dt>
+	<dd><%= @paciente.pessoa.login %></dd>
+	
+</dl>
+
+<%= link_to 'Atualizar', edit_paciente_path(@paciente) %> |
+<%= link_to 'Retornar para a listagem', pacientes_path %>

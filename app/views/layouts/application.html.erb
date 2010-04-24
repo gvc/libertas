@@ -8,6 +8,8 @@
 	<%= stylesheet_link_tag 'formularios' %>
 	<%= stylesheet_link_tag 'aplicacao' %>
 	<%= stylesheet_link_tag 'lra' %>
+	
+	<%= javascript_include_tag 'application'%>
 </head>
 <body id="formulario">
     <div id="topo">
@@ -15,7 +17,7 @@
     </div>
    	<ul id="menu">
         <li><a href="listar_consultas.html">Consultas</a></li>
-        <li><a href="listar_pacientes.html">Pacientes</a></li>
+        <li><%= link_to 'Pacientes', pacientes_path %></li>
         <li><a href="listar_funcionarios.html">Funcionários</a></li>
         <li><%= link_to 'Contas', contas_path %></li>
 		<li><a href="relatorios.html">Relatórios</a></li>

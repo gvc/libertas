@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nome: MyText
+  email: MyText
+  login: MyText
+  senha: MyText
+  cpf: MyString
+  sexo: MyString
+  data_nascimento: 2010-04-22
+
+two:
+  nome: MyText
+  email: MyText
+  login: MyText
+  senha: MyText
+  cpf: MyString
+  sexo: MyString
+  data_nascimento: 2010-04-22

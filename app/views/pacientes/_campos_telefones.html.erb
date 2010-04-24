@@ -1,0 +1,10 @@
+<div class="comprimento-1">
+    <%= f.label :codigo_area, 'Cód*' %>
+	<%= f.text_field :codigo_area, :maxlength => 2 %>
+</div>
+
+<div class="comprimento-3">
+	<%= f.label :telefone, @descricao %>
+	<%= f.text_field :telefone, :maxlength => 8 %>
+	<% @descricao = 'Celular*' %>
+</div>
