@@ -1,5 +1,5 @@
 class Pessoa < ActiveRecord::Base
-  has_one :paciente
+  belongs_to :paciente
   has_one :endereco, :dependent => :destroy
   has_many :telefones, :dependent => :destroy
   

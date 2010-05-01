@@ -1,7 +1,7 @@
 class CreateContas < ActiveRecord::Migration
   def self.up
     create_table :contas do |t|
-      t.text :descricao
+      t.string :descricao
       t.date :data_vencimento
       t.date :data_pagamento
       t.string :tipo_conta, :limit => 1

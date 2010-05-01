@@ -20,19 +20,18 @@ ActiveRecord::Schema.define(:version => 20100428033254) do
   add_index "agendas_disponibilidade", ["terapeuta_id"], :name => "fk_agendas_terapeutas"
 
   create_table "consultas", :force => true do |t|
-    t.integer "paciente_id"
-    t.integer "terapeuta_id"
-    t.date    "data_consulta"
-    t.date    "data_marcacao"
-    t.time    "hora"
-    t.text    "observacoes"
+    t.integer  "paciente_id"
+    t.integer  "terapeuta_id"
+    t.date     "data_consulta"
+    t.datetime "data_marcacao"
+    t.text     "observacoes"
   end
 
   add_index "consultas", ["paciente_id"], :name => "fk_consultas_pacientes"
   add_index "consultas", ["terapeuta_id"], :name => "fk_consultas_terapeutas"
 
   create_table "contas", :force => true do |t|
-    t.text    "descricao"
+    t.string  "descricao"
     t.date    "data_vencimento"
     t.date    "data_pagamento"
     t.string  "tipo_conta",      :limit => 1
@@ -40,19 +39,22 @@ ActiveRecord::Schema.define(:version => 20100428033254) do
   end
 
   create_table "enderecos", :force => true do |t|
+    t.integer "pessoa_id"
     t.string  "rua"
     t.string  "bairro"
     t.string  "cidade"
     t.string  "estado"
-    t.integer "cep",         :limit => 8
-    t.integer "numero"
+    t.string  "cep",         :limit => 8
+    t.string  "numero"
     t.string  "complemento"
   end
+
+  add_index "enderecos", ["pessoa_id"], :name => "fk_enderecos_pessoas"
 
   create_table "funcionarios", :force => true do |t|
     t.integer "pessoa_id"
     t.decimal "salario",                       :precision => 6, :scale => 2
-    t.integer "rg",               :limit => 8
+    t.string  "rg",               :limit => 7
     t.date    "data_contratacao"
     t.boolean "admin"
   end
@@ -66,30 +68,27 @@ ActiveRecord::Schema.define(:version => 20100428033254) do
   add_index "pacientes", ["pessoa_id"], :name => "fk_pacientes_pessoas"
 
   create_table "pessoas", :force => true do |t|
-    t.string  "nome"
-    t.string  "email"
-    t.string  "username"
-    t.string  "senha"
-    t.string  "cpf"
-    t.string  "sexo"
-    t.date    "data_nascimento"
-    t.integer "endereco_id"
+    t.string "nome"
+    t.string "email"
+    t.string "username"
+    t.string "senha"
+    t.string "cpf",             :limit => 11
+    t.string "sexo",            :limit => 1
+    t.date   "data_nascimento"
   end
-
-  add_index "pessoas", ["endereco_id"], :name => "fk_pessoas_enderecos"
 
   create_table "telefones", :force => true do |t|
     t.integer "pessoa_id"
     t.string  "codigo_area", :limit => 2
     t.string  "telefone",    :limit => 8
-    t.boolean "is_celular"
+    t.boolean "celular"
   end
 
   add_index "telefones", ["pessoa_id"], :name => "fk_telefones_pessoas"
 
   create_table "terapeutas", :force => true do |t|
     t.integer "funcionario_id"
-    t.integer "crp"
+    t.string  "crp"
   end
 
   add_index "terapeutas", ["funcionario_id"], :name => "fk_terapeutas_funcionarios"

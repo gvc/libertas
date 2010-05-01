@@ -4,8 +4,7 @@ class CreateConsultas < ActiveRecord::Migration
       t.integer :paciente_id
       t.integer :terapeuta_id
       t.date :data_consulta
-      t.date :data_marcacao
-      t.time :hora
+      t.datetime :data_marcacao
       t.text :observacoes
     end
     execute %{alter table consultas

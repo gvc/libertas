@@ -5,13 +5,10 @@ class CreatePessoas < ActiveRecord::Migration
       t.string :email
       t.string :username
       t.string :senha
-      t.string :cpf
-      t.string :sexo
+      t.string :cpf, :limit => '11'
+      t.string :sexo, :limit => '1'
       t.date :data_nascimento
-      t.integer :endereco_id
     end
-    execute %{alter table pessoas
-      add constraint fk_pessoas_enderecos foreign key (endereco_id) references enderecos(id)}
   end
 
   def self.down

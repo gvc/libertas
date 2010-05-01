@@ -1,5 +1,5 @@
 class Endereco < ActiveRecord::Base
-  belongs_to :pessoa
+  has_one :pessoa
   
   validates_presence_of :rua, :message => 'indefinida.'
   validates_presence_of :bairro, :message => 'indefinido.'
