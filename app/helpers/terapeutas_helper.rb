@@ -1,0 +1,2 @@
+module TerapeutasHelper
+end

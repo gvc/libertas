@@ -3,7 +3,7 @@
 one:
   nome: MyText
   email: MyText
-  login: MyText
+  username: MyText
   senha: MyText
   cpf: MyString
   sexo: MyString
@@ -12,7 +12,7 @@ one:
 two:
   nome: MyText
   email: MyText
-  login: MyText
+  username: MyText
   senha: MyText
   cpf: MyString
   sexo: MyString

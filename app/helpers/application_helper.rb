@@ -25,6 +25,6 @@ module ApplicationHelper
     end
     
     def formatar_telefone(telefone)
-      telefone_formatado = '(' + telefone.codigo_area + ') ' + telefone.telefone
+      "(#{telefone.try(:codigo_area)}) #{telefone.try(:telefone)}"
     end
 end

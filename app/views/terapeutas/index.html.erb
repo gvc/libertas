@@ -1,0 +1,34 @@
+<h1>Lista de Terapeutas</h1>
+
+<% if @terapeutas and @terapeutas.any? %>
+	<table class="lista">
+		<tbody>
+			<% @terapeutas.each do |terapeuta| %>
+				<tr>
+					<td>
+						<div id="container">
+							<div id="fixtext">
+								<%= terapeuta.funcionario.pessoa.nome %>
+							</div>
+							<div id="fiximage">
+								<a href="<%= terapeuta_path terapeuta %>">
+									<img src="/images/listarsmall.png" alt="Listar">
+								</a>
+								<a href="<%= edit_terapeuta_path terapeuta %>">
+									<img src="/images/atualizarsmall.png" alt="Listar">
+								</a>
+								<%= link_to "<img src='/images/removersmall.png' alt='Listar'>", terapeuta, :confirm => 'Deseja realmente remover?', :method=> :delete %>
+							</div>
+						</div>
+					</td>
+				</tr>
+			<% end -%>
+		</tbody>
+	</table>
+<% else %>
+	<p>Não há terapeutas cadastrados</p>
+<% end -%>
+
+<p>
+	<%= link_to 'Cadastrar novo terapeuta', new_terapeuta_path %>
+</p>

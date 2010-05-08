@@ -4,10 +4,10 @@ one:
   pessoa_id: 1
   codigo_area: MyString
   telefone: MyString
-  is_celular: false
+  celular: false
 
 two:
   pessoa_id: 1
   codigo_area: MyString
   telefone: MyString
-  is_celular: false
+  celular: false

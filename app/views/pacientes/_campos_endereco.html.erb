@@ -15,10 +15,10 @@
 
 <div class="comprimento-4">
 	<%= f.label :estado, 'Estado*' %>
-	<% if @paciente.pessoa.endereco.estado == nil %>
-		<%= select_tag :estado, grouped_options_for_select(@paciente.pessoa.endereco.lista_estados, 'Pernambuco') %>
+	<% if modelo.pessoa.endereco.estado == nil %>
+		<%= f.select :estado, grouped_options_for_select(Endereco.lista_estados, 'Pernambuco') %>
 	<% else %>
-		<%= select_tag :estado, grouped_options_for_select(@paciente.pessoa.endereco.lista_estados, @paciente.pessoa.endereco.estado) %>
+		<%= f.select :estado, grouped_options_for_select(Endereco.lista_estados, modelo.pessoa.endereco.estado) %>
 	<% end %>
 </div>
 

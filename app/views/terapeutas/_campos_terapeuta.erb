@@ -1,0 +1,18 @@
+<% form_for(@terapeuta, :html => {:class => 'cadastro'}) do |f| %>
+  <%= f.error_messages %>
+	
+  <% f.fields_for :funcionario do |func_builder| %>
+  	<%= render :partial => 'campos_funcionario', :locals => {:f => func_builder, :modelo => @terapeuta.funcionario} %>
+  <% end %>
+
+	<div class="comprimento-4">
+		<%= f.label :crp, 'CRP*' %>
+		<%= f.text_field :crp %>
+	</div>
+
+  <div class="botoes primeiro">
+    <%= f.submit rotulo_botao %>
+		ou
+		<%= link_to 'cancelar', terapeutas_path %>
+  </div>
+<% end %>

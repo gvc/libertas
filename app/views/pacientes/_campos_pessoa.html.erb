@@ -4,11 +4,11 @@
 </div>
 
 <% f.fields_for :endereco do |endereco_builder| %>
-	<%= render 'campos_endereco', :f => endereco_builder %>
+	<%= render 'pacientes/campos_endereco', :f => endereco_builder, :modelo => modelo %>
 <% end %>
 
 <% f.fields_for :telefones do |telefones_builder| %>
-	<%= render 'campos_telefones', :f => telefones_builder %>
+	<%= render 'pacientes/campos_telefones', :f => telefones_builder %>
 <% end %>
 
 <div class="comprimento-4">
@@ -25,10 +25,10 @@
 
 <div class="comprimento-4">
 	<%= f.label :data_nascimento, 'Data de Nascimento*' %>
-	<% if @paciente.pessoa.data_nascimento == nil %>
+	<% if modelo.pessoa.data_nascimento == nil %>
 		<%= f.text_field :data_nascimento, :maxlength => 10, :onkeypress => "mascara(this,mdata)" %>
 	<% else %>
-		<%= f.text_field :data_nascimento, :maxlength => 10, :value => formatar_data(@paciente.pessoa.data_nascimento), :onkeypress => "mascara(this,mdata)" %>
+		<%= f.text_field :data_nascimento, :maxlength => 10, :value => formatar_data(modelo.pessoa.data_nascimento), :onkeypress => "mascara(this,mdata)" %>
 	<% end -%>
 </div>  
 
@@ -53,6 +53,6 @@
 </div> 
 
 <div class="comprimento-4">
-	<%= f.label :conf_senha, 'Confirmar Senha*' %>
-	<%= f.password_field :conf_senha %>
+	<%= f.label :senha_confirmation, 'Confirmar Senha*' %>
+	<%= f.password_field :senha_confirmation %>
 </div>

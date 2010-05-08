@@ -25,8 +25,8 @@ class PacientesController < ApplicationController
   # GET /pacientes/new.xml
   def new
     @paciente = Paciente.new
-    @paciente.pessoa = Pessoa.new
-    @paciente.pessoa.endereco = Endereco.new
+    @paciente.build_pessoa
+    @paciente.pessoa.build_endereco
     2.times {@paciente.pessoa.telefones.build}
     @descricao = 'Telefone*'
     
@@ -45,22 +45,12 @@ class PacientesController < ApplicationController
   # POST /pacientes.xml
   def create
     @paciente = Paciente.new(params[:paciente])
-    data_valida = @paciente.pessoa.transformar_data params[:paciente][:pessoa_attributes][:data_nascimento]
-    senha_valida = @paciente.pessoa.validar_senha params[:paciente][:pessoa_attributes][:senha], params[:paciente][:pessoa_attributes][:conf_senha]
-    @paciente.pessoa.telefones[0].is_celular = false
-    @paciente.pessoa.telefones[1].is_celular = true
-    @paciente.pessoa.endereco.estado = params[:estado]
-    
-    
-    respond_to do |format|
-      if data_valida && senha_valida && @paciente.save
-        flash[:notice] = 'Paciente cadastrado com sucesso.'
-        format.html { redirect_to(@paciente) }
-        format.xml  { render :xml => @paciente, :status => :created, :location => @paciente }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @paciente.errors, :status => :unprocessable_entity }
-      end
+    @paciente.pessoa.telefones[0].celular = false
+    @paciente.pessoa.telefones[1].celular = true
+    if @paciente.save
+      redirect_to(@paciente)
+    else
+      render :action => :new
     end
   end
 

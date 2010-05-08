@@ -1,0 +1,8 @@
+<% f.fields_for :pessoa do |pessoa_builder| %>
+	<%= render 'pacientes/campos_pessoa', :f => pessoa_builder, :modelo => modelo %>
+<% end %>
+
+<div class="comprimento-4 primeiro">
+	<%= f.label :rg, 'RG*' %>
+	<%= f.text_field :rg %>
+</div>

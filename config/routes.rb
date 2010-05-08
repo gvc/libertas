@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :pacientes
-
+  map.resources :terapeutas
   map.resources :contas
 
   # The priority is based upon order of creation: first created -> highest priority.

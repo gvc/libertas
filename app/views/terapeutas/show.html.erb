@@ -1,0 +1,49 @@
+<h1>Visualizar terapeuta</h1>
+
+<dl>
+	<dt>Nome</dt>
+	<dd><%= @terapeuta.funcionario.pessoa.nome %></dd>
+	
+	<dt>Sexo</dt>
+	<dd><%= @terapeuta.funcionario.pessoa.sexo %></dd>
+	
+	<dt>Data de Nascimento</dt>
+	<dd><%= l @terapeuta.funcionario.pessoa.data_nascimento %></dd>
+	
+	<dt>Rua</dt>
+	<dd><%= @terapeuta.funcionario.pessoa.endereco.rua %></dd>
+	
+	<dt>Bairro</dt>
+	<dd><%= @terapeuta.funcionario.pessoa.endereco.bairro %></dd>
+	
+	<dt>Cidade</dt>
+	<dd><%= @terapeuta.funcionario.pessoa.endereco.cidade %></dd>
+		
+	<dt>Estado</dt>
+	<dd><%= @terapeuta.funcionario.pessoa.endereco.estado %></dd>
+	
+	<dt>CEP</dt>
+	<dd><%= @terapeuta.funcionario.pessoa.endereco.cep %></dd>
+	
+	<dt>Telefone</dt>
+	<dd><%= formatar_telefone(@terapeuta.funcionario.pessoa.telefones[0]) %></dd>
+	
+	<dt>CPF</dt>
+	<dd><%= @terapeuta.funcionario.pessoa.cpf %></dd>
+	
+	<dt>Email</dt>
+	<dd><%= @terapeuta.funcionario.pessoa.email %></dd>
+	
+	<dt>Login</dt>
+	<dd><%= @terapeuta.funcionario.pessoa.username %></dd>
+	
+	<dt>RG</dt>
+	<dd><%= @terapeuta.funcionario.rg %></dd>
+	
+	<dt>CRP</dt>
+	<dd><%= @terapeuta.crp %></dd>
+	
+</dl>
+
+<%= link_to 'Atualizar', edit_terapeuta_path(@terapeuta) %> |
+<%= link_to 'Retornar para a listagem', terapeutas_path %>

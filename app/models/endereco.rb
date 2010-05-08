@@ -7,7 +7,7 @@ class Endereco < ActiveRecord::Base
   validates_presence_of :estado, :message => 'indefinido.'
   
     
-  def lista_estados
+  def self.lista_estados
        
         {'Centro-Oeste' => [
             ['Distrito Federal', 'Distrito Federal'],
