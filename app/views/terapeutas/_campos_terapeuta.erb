@@ -9,6 +9,16 @@
 		<%= f.label :crp, 'CRP*' %>
 		<%= f.text_field :crp %>
 	</div>
+	
+	<fieldset>
+		<legend>Disponibilidade de Agenda</legend>
+		
+		<% f.fields_for :agendas_disponibilidade do |disp_builder| %>
+			<%= render :partial => 'campos_disponibilidade', :locals => {:f => disp_builder} %>
+		<% end -%>
+		
+		<%= link_to_add_fields "Nova disponibilidade", f, :agendas_disponibilidade, 'campos_disponibilidade' %>
+	</fieldset>
 
   <div class="botoes primeiro">
     <%= f.submit rotulo_botao %>

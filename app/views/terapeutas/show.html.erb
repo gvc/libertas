@@ -43,6 +43,17 @@
 	<dt>CRP</dt>
 	<dd><%= @terapeuta.crp %></dd>
 	
+	<dt>Disponibilidades de Agenda</dt>
+	
+	<% if @terapeuta.agendas_disponibilidade.any? %>
+		<% for disp in @terapeuta.agendas_disponibilidade  %>
+			<dd><%= formatar_dia_semana(disp.dia_semana) %> (<%= formatar_hora_inicial(disp.hora_inicial) %>)</dd>
+		<% end %>
+	<% else %>
+		<dd>Não existem disponibilidades de agenda cadastradas para este terapeuta.</dd>
+	<% end -%>
+
+	
 </dl>
 
 <%= link_to 'Atualizar', edit_terapeuta_path(@terapeuta) %> |

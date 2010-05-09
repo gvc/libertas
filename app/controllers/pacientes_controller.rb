@@ -27,7 +27,7 @@ class PacientesController < ApplicationController
     @paciente = Paciente.new
     @paciente.build_pessoa
     @paciente.pessoa.build_endereco
-    2.times {@paciente.pessoa.telefones.build}
+    2.times { @paciente.pessoa.telefones.build }
     @descricao = 'Telefone*'
     
     respond_to do |format|
@@ -48,6 +48,7 @@ class PacientesController < ApplicationController
     @paciente.pessoa.telefones[0].celular = false
     @paciente.pessoa.telefones[1].celular = true
     if @paciente.save
+      flash[:notice] = 'Paciente criado com sucesso.'
       redirect_to(@paciente)
     else
       render :action => :new

@@ -1,0 +1,14 @@
+<div class="campos">
+	<div class="comprimento-4 primeiro">
+		<%= f.label :dia_semana, 'Dia da Semana' %>
+		<%= f.select :dia_semana, AgendaDisponibilidade.dias_semana %>
+	</div>
+	
+	<div class="comprimento-2">
+		<%= f.label :hora_inicial %>
+		<%= f.text_field :hora_inicial, :value => formatar_hora_inicial(f.object.hora_inicial) %>
+	</div>
+
+	<%= link_to_remove_fields "remover", f %>
+</div>
+

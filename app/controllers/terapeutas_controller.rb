@@ -12,6 +12,7 @@ class TerapeutasController < ApplicationController
   def create
     @terapeuta = Terapeuta.new(params[:terapeuta])
     if @terapeuta.save
+      flash[:notice] = 'Terapeuta criado com sucesso.'
       redirect_to(@terapeuta)
     else
       render :action => :new
@@ -25,7 +26,7 @@ class TerapeutasController < ApplicationController
   def update
     @terapeuta = Terapeuta.find(params[:id])
     if @terapeuta.update_attributes(params[:terapeuta])
-      flash[:notice] = 'Paciente atualizado com sucesso.'
+      flash[:notice] = 'Terapeuta atualizado com sucesso.'
       redirect_to(@terapeuta)
     else
       render :action => :edit
