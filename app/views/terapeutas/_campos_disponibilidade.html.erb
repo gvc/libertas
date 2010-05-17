@@ -4,9 +4,9 @@
 		<%= f.select :dia_semana, AgendaDisponibilidade.dias_semana %>
 	</div>
 	
-	<div class="comprimento-2">
-		<%= f.label :hora_inicial %>
-		<%= f.text_field :hora_inicial, :value => formatar_hora_inicial(f.object.hora_inicial) %>
+	<div class="comprimento-4">
+		<%= f.label :hora_inicial, 'Horário' %>
+		<%= f.select :hora_inicial, Consulta.horas_consulta, {:selected => Consulta.formatar_hora_consulta(f.object.try(:hora_inicial))} %>
 	</div>
 
 	<%= link_to_remove_fields "remover", f %>

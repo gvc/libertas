@@ -3,7 +3,7 @@ class CreateConsultas < ActiveRecord::Migration
     create_table :consultas do |t|
       t.integer :paciente_id
       t.integer :terapeuta_id
-      t.date :data_consulta
+      t.datetime :data_consulta
       t.datetime :data_marcacao
       t.text :observacoes
     end
@@ -16,4 +16,5 @@ class CreateConsultas < ActiveRecord::Migration
   def self.down
     drop_table :consultas
   end
+  
 end

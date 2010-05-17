@@ -4,7 +4,7 @@
   <%= f.error_messages %>
 	
   <% f.fields_for :pessoa do |pessoa_builder| %>
-  	<%= render 'campos_pessoa', :f => pessoa_builder %>
+  	<%= render 'campos_pessoa', :f => pessoa_builder, :modelo => @paciente %>
   <% end %>	
 
   <div class="botoes primeiro">

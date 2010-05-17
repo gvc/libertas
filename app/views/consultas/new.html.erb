@@ -1,0 +1,198 @@
+<script type="text/javascript" charset="utf-8">
+
+function gerarDatas(primeiraData){
+	data = primeiraData;
+	diasSemana = ["Segunda","Terça","Quarta","Quinta","Sexta"];
+	table = document.getElementById("calendario");
+	oneRow = table.tHead.rows[0];
+	
+	oneRow.cells[1].innerHTML = diasSemana[0] + ', ' + diaEMes(data);
+	
+	for (i = 1; i < 5; i = i + 1){
+		data = proximaData(data);
+		oneRow.cells[i + 1].innerHTML =  diasSemana[i] + ', ' + diaEMes(data);
+	}
+}
+
+function avancar(terapeuta_id){
+	data = document.getElementById("data0").value;
+	data = incrementDataByN(data,7);
+	window.location='/Consultas/new?ts=' + terapeuta_id + '&pd=' + data;
+}
+
+function retornar(terapeuta_id){
+	data = document.getElementById("data0").value;
+	data = decrementDataByN(data,7);
+	window.location='/Consultas/new?ts=' + terapeuta_id + '&pd=' + data;
+}
+
+function mudar_terapeuta(select){
+	window.location='/Consultas/new?ts=' + select.value;
+}
+	
+
+</script>
+
+<h1>Marcar Consulta</h1>
+
+<% form_for(@consulta) do |f| %>
+  <%= f.error_messages %>
+	
+	<div class="cadastro">
+		<input id="data0" type="hidden" value="<%= $datas[0] %>">
+		<input id="ter_id" type="hidden" value="<%= $terapeuta_selecionado %>">
+	
+		<div class="comprimento-4 primeiro">
+			<%= f.label :terapeuta_id, 'Terapeuta' %>
+			<%= f.select :terapeuta_id, options_from_collection_for_select(@terapeutas, :id, 'nome', $terapeuta_selecionado.to_i), {}, :onchange => "mudar_terapeuta(this)" %>
+		</div>
+	
+	
+		<div class="comprimento-4">
+			<%= f.label :hora_consulta, 'Horário' %>
+			<%= f.select :hora_consulta, Consulta.horas_consulta %>
+		</div>
+	
+		<div class="comprimento-4">
+			<%= f.label :dia_consulta, 'Data' %>
+			<%= f.text_field :dia_consulta, :maxlength => 10, :onkeypress => "mascara(this,mdata)" %>
+		</div>
+
+		<div class="comprimento-8 primeiro">
+			<%= f.label :paciente_id, 'Paciente (CPF - Nome)' %>
+			<%= f.select :paciente_id, options_from_collection_for_select(@pacientes, 'id', 'cpf_nome') %>
+		</div>
+	
+	</div>
+	
+	<br style="clear:both;" />
+	<div id="calendario-wrapper">
+		<div class="opcoes-calendario">
+			<a class="anterior" href="#" onclick="retornar(<%= $terapeuta_selecionado%>)">Semana anterior</a>									
+			<a class="proxima" href="#" onclick="avancar(<%= $terapeuta_selecionado%>)">Próxima semana</a>
+		</div>
+		
+		<br style="clear:both;" />
+		<table id="calendario" class="calendario">
+			<thead>
+				<tr>
+					<th class="first"></th>
+					<th>Segunda</th>
+					<th>Terça</th>
+					<th>Quarta</th>
+					<th>Quinta</th>
+					<th>Sexta</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="first">08:00 - 09:00</td>
+					
+					<% 5.times do |b| %>
+						<% status = status_calendario($datas[b], '08:00', b, $terapeuta_selecionado) %>
+						<td class="<%= status%>"></td>
+					<% end %>
+				</tr>
+			</tbody>
+			<tbody>
+				<tr>
+					<td class="first">09:00 - 10:00</td>
+					<% 5.times do |b| %>
+						<%status = status_calendario($datas[b], '09:00', b , $terapeuta_selecionado)%>
+						<td class="<%= status%>"></td>
+					<%end%>
+				</tr>
+			</tbody>
+			<tbody>
+				<tr>
+					<td class="first">10:00 - 11:00</td>
+					<% 5.times do |b| %>
+						<%status = status_calendario($datas[b], '10:00', b , $terapeuta_selecionado)%>
+						<td class="<%= status%>"></td>
+					<%end%>
+				</tr>
+			</tbody>
+			<tbody>
+				<tr>
+					<td class="first">11:00 - 12:00</td>
+					<% 5.times do |b| %>
+						<%status = status_calendario($datas[b], '11:00', b , $terapeuta_selecionado)%>
+						<td class="<%= status%>"></td>
+					<%end%>
+				</tr>
+			</tbody>
+			<tbody>
+				<tr>
+					<td class="first">12:00 - 13:00</td>
+					<% 5.times do |b| %>
+						<%status = status_calendario($datas[b], '12:00', b , $terapeuta_selecionado)%>
+						<td class="<%= status%>"></td>
+					<%end%>
+				</tr>
+			</tbody>
+			<tbody>
+				<tr>
+					<td class="first">13:00 - 14:00</td>
+					<% 5.times do |b| %>
+						<%status = status_calendario($datas[b], '13:00', b , $terapeuta_selecionado)%>
+						<td class="<%= status%>"></td>
+					<%end%>
+				</tr>
+			</tbody>
+			<tbody>
+				<tr>
+					<td class="first">14:00 - 15:00</td>
+					<% 5.times do |b| %>
+						<%status = status_calendario($datas[b], '14:00', b , $terapeuta_selecionado)%>
+						<td class="<%= status%>"></td>
+					<%end%>
+				</tr>
+			</tbody>
+			<tbody>
+				<tr>
+					<td class="first">15:00 - 16:00</td>
+					<% 5.times do |b| %>
+						<%status = status_calendario($datas[b], '15:00', b , $terapeuta_selecionado)%>
+						<td class="<%= status%>"></td>
+					<%end%>
+				</tr>
+			</tbody>
+			<tbody>
+				<tr>
+					<td class="first">16:00 - 17:00</td>
+					<% 5.times do |b| %>
+						<%status = status_calendario($datas[b], '16:00', b , $terapeuta_selecionado)%>
+						<td class="<%= status%>"></td>
+					<%end%>
+				</tr>
+			</tbody>
+			<tbody>
+				<tr>
+					<td class="first">17:00 - 18:00</td>
+					<% 5.times do |b| %>
+						<%status = status_calendario($datas[b], '17:00', b , $terapeuta_selecionado)%>
+						<td class="<%= status%>"></td>
+					<%end%>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="botoes primeiro">
+	    <%= f.submit 'Enviar' %>
+			ou
+		<%= link_to 'cancelar', consultas_path %>
+	</div>
+	
+<% end %>
+
+<script type="text/javascript" charset="utf-8">
+	id = document.getElementById("ter_id").value;
+	document.getElementById("consulta_terapeuta_id").selected = id;
+	
+	document.getElementById("calendario-wrapper").style.display = "block";
+	data = document.getElementById("data0").value;
+	gerarDatas(data);
+	
+	
+</script>

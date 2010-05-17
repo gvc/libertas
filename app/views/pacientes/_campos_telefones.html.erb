@@ -1,10 +1,10 @@
 <div class="comprimento-1">
     <%= f.label :codigo_area, 'Cód*' %>
-	<%= f.text_field :codigo_area, :maxlength => 2 %>
+	<%= f.text_field :codigo_area, :maxlength => 2, :onkeypress => 'mascara(this,soNumeros)' %>
 </div>
 
 <div class="comprimento-3">
 	<%= f.label :telefone, @descricao %>
-	<%= f.text_field :telefone, :maxlength => 8 %>
+	<%= f.text_field :telefone, :maxlength => 8 , :onkeypress => 'mascara(this,soNumeros)' %>
 	<% @descricao = 'Celular*' %>
 </div>

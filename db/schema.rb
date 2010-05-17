@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20100428033254) do
   create_table "consultas", :force => true do |t|
     t.integer  "paciente_id"
     t.integer  "terapeuta_id"
-    t.date     "data_consulta"
+    t.datetime "data_consulta"
     t.datetime "data_marcacao"
     t.text     "observacoes"
   end

@@ -41,7 +41,7 @@ class ContasController < ApplicationController
   # POST /contas.xml
   def create
     @conta = Conta.new(params[:conta])
-    data_valida = @conta.transformar_datas params[:conta][:data_vencimento], params[:conta][:data_pagamento]
+    data_valida = @conta.transformar_datas params[:conta][:data_pagamento], params[:conta][:data_vencimento]
     
     respond_to do |format|
       if data_valida && @conta.save
@@ -59,7 +59,7 @@ class ContasController < ApplicationController
   # PUT /contas/1.xml
   def update
     @conta = Conta.find(params[:id])
-    data_valida = @conta.transformar_datas params[:conta][:data_vencimento], params[:conta][:data_pagamento]
+    data_valida = @conta.transformar_datas params[:conta][:data_pagamento], params[:conta][:data_vencimento]
     
     respond_to do |format|
       if data_valida && @conta.update_attributes(params[:conta])

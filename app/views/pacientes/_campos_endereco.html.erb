@@ -24,5 +24,5 @@
 
 <div class="comprimento-4 primeiro">
 	<%= f.label :cep, 'CEP' %>
-	<%= f.text_field :cep %>
+	<%= f.text_field :cep, :maxlength => 8, :onkeypress => 'mascara(this,soNumeros)' %>
 </div>

@@ -5,6 +5,6 @@ class AgendaDisponibilidade < ActiveRecord::Base
   validates_presence_of :hora_inicial
   
   def self.dias_semana
-    [['Domingo', 0], ['Segunda', 1], ['Terça', 2], ['Quarta', 3], ['Quinta', 4], ['Sexta', 5], ['Sábado', 6]]
+    [['Segunda', 0], ['Terça', 1], ['Quarta', 2], ['Quinta', 3], ['Sexta', 4]]
   end
 end

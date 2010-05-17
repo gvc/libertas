@@ -44,7 +44,7 @@
 
 <div class="comprimento-4">
 	<%= f.label :cpf, 'CPF' %>
-	<%= f.text_field :cpf %>
+	<%= f.text_field :cpf, :maxlength => 11, :onkeypress => 'mascara(this,soNumeros)' %>
 </div>
 
 <div class="comprimento-4 primeiro">

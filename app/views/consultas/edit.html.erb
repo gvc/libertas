@@ -1,0 +1,72 @@
+<script type="text/javascript" charset="utf-8">
+	function trim(str){return str.replace(/^\s+|\s+$/g,"");}
+	
+	function cabecalhoObs() {
+		if(document.getElementById('hidden_info').value == 'yes'){
+			var hoje = new Date(); 
+			var hora = hoje.getHours(); 
+			var minuto = hoje.getMinutes(); 
+			var timeValue = "" + ((hora >12) ? hora -12 :hora) 
+			timeValue += ((minuto < 10) ? ":0" : ":") + minuto
+			timeValue += (hora >= 12) ? " PM" : " AM" 
+		
+			hoje = new Date();
+			var dia = hoje.getDate(); 
+			var mes = hoje.getMonth() + 1; 
+			var ano = hoje.getFullYear(); 
+		
+			var data = dia + "/" + mes + "/" + ano + " - " + timeValue;
+		
+			var obs = document.getElementById('consulta_observacoes').value;
+		
+			var linha = '-----------------';
+			
+			if(trim(obs).length == 0){
+				document.getElementById('consulta_observacoes').value = linha + "\n" + data + "\n" + linha + "\n\n";
+			}else{
+				document.getElementById('consulta_observacoes').value = obs + "\n\n" + linha + "\n" + data + "\n" + linha + "\n\n";
+			}
+			document.getElementById('hidden_info').value = 'no'; 
+		}
+	}
+</script>
+
+<h1>Atualizar Consulta</h1>
+
+<% form_for(@consulta, :html => {:class => 'cadastro'}) do |f| %>
+  <%= f.error_messages %>
+
+	<input id="hidden_info" type="hidden" value="<%=@from_controller%>">
+
+	<div class="comprimento-4 primeiro">
+		<%= f.label :terapeuta_id, 'Terapeuta' %>
+		<%= f.select :terapeuta_id, options_from_collection_for_select(@terapeutas, :id, 'nome', @consulta.terapeuta_id), {}, {:disabled => true} %>
+	</div>
+	
+	<div class="comprimento-4">
+		<%= f.label :hora_consulta, 'Horário' %>
+		<%= f.select :hora_consulta, Consulta.horas_consulta, {:selected => Consulta.formatar_hora_consulta(@consulta.data_consulta)}, {:disabled => true} %>
+	</div>
+	
+	<div class="comprimento-4">
+		<%= f.label :dia_consulta, 'Data' %>
+		<%= f.text_field :dia_consulta, :maxlength => 10, :value => Consulta.formatar_data_consulta(@consulta.data_consulta), :readonly => true, :onkeypress => "mascara(this,mdata)" %>
+	</div>
+
+	<div class="comprimento-4 primeiro">
+		<%= f.label :paciente_id, 'Paciente' %>
+		<%= f.select :paciente_id, options_from_collection_for_select(@pacientes, 'id', 'cpf_nome'), {}, {:disabled => true} %>
+	</div>
+	
+    <div class="comprimento-8 importante">
+		<%= f.label :observacoes, 'Observações' %>
+		<%= f.text_area :observacoes, :rows => 10, :onclick => "cabecalhoObs()" %>
+	</div>
+	
+	<div class="botoes primeiro">
+	    <%= f.submit 'Atualizar' %>
+			ou
+		<%= link_to 'cancelar', consultas_path %>
+	  </div>
+	
+<% end %>

@@ -1,0 +1,22 @@
+<h1>Visualizar consulta</h1>
+
+<dl>
+	<dt>Terapêuta</dt>
+	<dd><%= @consulta.terapeuta.funcionario.pessoa.nome %></dd>
+	<dt>Paciente</dt>
+	<dd><%= @consulta.paciente.pessoa.nome %></dd>
+	<dt>Horário</dt>
+	<dd><%= Consulta.formatar_hora_consulta(@consulta.data_consulta) %></dd>
+	<dt>Data</dt>
+	<dd><%= Consulta.formatar_data_consulta(@consulta.data_consulta) %></dd>
+	<dt>Observações</dt>
+	<dd>
+		<div class="comprimento-8 importante primeiro">
+			<textarea rows="10" readonly="true"><%= @consulta.observacoes %></textarea>
+		</div>
+	</dd>
+
+</dl>
+
+<%= link_to 'Atualizar', edit_consulta_path(@consulta) %> |
+<%= link_to 'Retornar para a listagem', consultas_path %>
