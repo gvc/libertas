@@ -1,3 +1,5 @@
+require 'digest/sha1'
+
 class Pessoa < ActiveRecord::Base
   belongs_to :paciente
   has_one :endereco, :dependent => :destroy
@@ -44,6 +46,21 @@ class Pessoa < ActiveRecord::Base
       return false
   end
   
+  def senha
+    @senha    
+  end
+  
+  def senha=(valor)
+    @senha = valor
+    return if valor.blank?
+    criar_sal
+    self['senha_hash'] = Pessoa.senha_criptografada(valor, self.sal)
+  end
+  
+  def criar_sal
+    self.sal = self.object_id.to_s + rand.to_s
+  end
+  
   def validar_data(data)
     dia = data[0].to_i
     mes = data[1].to_i
@@ -76,5 +93,22 @@ class Pessoa < ActiveRecord::Base
     end      
     
     return true
+  end
+  
+  def self.senha_criptografada(senha, sal)
+    string_to_hash = senha + "swing" + sal
+    Digest::SHA1.hexdigest(string_to_hash)
+  end
+  
+  def self.autenticar(login, senha)
+    pessoa = self.find_by_username(login)
+    if pessoa
+      senha_esperada = senha_criptografada(senha, pessoa.sal)
+      if pessoa.senha_hash != senha_esperada
+        pessoa = nil
+      end
+    end
+    
+    pessoa
   end
 end
