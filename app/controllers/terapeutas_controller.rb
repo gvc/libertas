@@ -11,9 +11,8 @@ class TerapeutasController < ApplicationController
 
   def create
     @terapeuta = Terapeuta.new(params[:terapeuta])
-    data_valida = @terapeuta.funcionario.pessoa.transformar_data params[:terapeuta][:funcionario_attributes][:pessoa_attributes][:data_nascimento]
         
-    if data_valida && @terapeuta.save
+    if @terapeuta.save
       flash[:notice] = 'Terapeuta criado com sucesso.'
       redirect_to(@terapeuta)
     else
@@ -27,10 +26,8 @@ class TerapeutasController < ApplicationController
 
   def update
     @terapeuta = Terapeuta.find(params[:id])
-    data_valida = @terapeuta.funcionario.pessoa.transformar_data params[:terapeuta][:funcionario_attributes][:pessoa_attributes][:data_nascimento]
-     params[:terapeuta][:funcionario_attributes][:pessoa_attributes][:data_nascimento] = @terapeuta.funcionario.pessoa.data_nascimento.to_s
     
-    if data_valida && @terapeuta.update_attributes(params[:terapeuta])
+    if @terapeuta.update_attributes(params[:terapeuta])
       flash[:notice] = 'Terapeuta atualizado com sucesso.'
       redirect_to(@terapeuta)
     else

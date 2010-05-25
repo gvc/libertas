@@ -15,7 +15,7 @@ class Pessoa < ActiveRecord::Base
   validates_presence_of :data_nascimento, :message => 'indefinida.'
   validates_presence_of :email, :message => 'indefinido.'
   validates_presence_of :username, :message => 'indefinido.'
-  validates_presence_of :senha, :message => 'indefinida.'
+  validates_presence_of :senha, :message => 'indefinida.', :on => :create
   
   validates_uniqueness_of :cpf, :message => 'já cadastrado no sistema.', :allow_blank => false
   
