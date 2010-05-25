@@ -19,7 +19,7 @@
 #logsquare {
 	position: absolute;
 	width: 260px;
-	height: 170px;
+	height: 200px;
 	left: 60%;
 	top: 20%;
 	border-width: 2px;
@@ -81,4 +81,12 @@
 .comprimento-4 INPUT[type=password],
 .comprimento-4 TEXTAREA {
 	width: 200px;
+}
+
+#error {
+  color: red;
+}
+
+#sucesso {
+  color: green;
 }
