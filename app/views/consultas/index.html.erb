@@ -8,7 +8,8 @@
 					<td>
 						<div id="container">
 							<div id="fixtext">
-								<%=h consulta.descricao %>
+								Paciente: <%= consulta.paciente.pessoa.nome %>
+								- Data/Hora: <%= l consulta.data_consulta, :format => :medium %> 
 							</div>
 							<div id="fiximage">
 								<a href="<%= consulta_path consulta %>">

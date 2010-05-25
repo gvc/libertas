@@ -32,7 +32,7 @@ class ConsultasController < ApplicationController
     @terapeutas = Terapeuta.all
     @pacientes = Paciente.all
     
-    if params[:pd] == nil
+    unless params[:pd]
       $datas = Consulta.data_segunda_feira(Date.today)
     else
       $datas = Consulta.data_segunda_feira(Consulta.transformar_data(params[:pd]).to_date)
@@ -58,21 +58,14 @@ class ConsultasController < ApplicationController
   # POST /consultas.xml
   def create
     @consulta = Consulta.new(params[:consulta])
-    @consulta.formatar_data_hora_consulta params[:consulta][:hora_consulta], params[:consulta][:dia_consulta]
-    disponivel = Consulta.verificar_disponibilidade Consulta.formatar_hora_consulta(@consulta.data_consulta), @consulta.data_consulta.to_date.wday() - 1, @consulta.terapeuta_id
     
-    
-    respond_to do |format|
-      if disponivel && @consulta.save
-        flash[:notice] = 'Consulta cadastrada com sucesso.'
-        format.html { redirect_to(@consulta) }
-        format.xml  { render :xml => @consulta, :status => :created, :location => @consulta }
-      else
-        @terapeutas = Terapeuta.all
-        @pacientes = Paciente.all
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @consulta.errors, :status => :unprocessable_entity }
-      end
+    if @consulta.save
+      flash[:notice] = 'Consulta cadastrada com sucesso.'
+      redirect_to(@consulta)
+    else
+      @terapeutas = Terapeuta.all
+      @pacientes = Paciente.all
+      render :action => "new"
     end
   end
 
@@ -100,10 +93,7 @@ class ConsultasController < ApplicationController
     @consulta.destroy
     flash[:notice] = 'Consulta removida com sucesso.'
 
-    respond_to do |format|
-      format.html { redirect_to(consultas_url) }
-      format.xml  { head :ok }
-    end
+    redirect_to(consultas_url)
   end
 end
 

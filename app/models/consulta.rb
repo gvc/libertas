@@ -2,7 +2,12 @@ class Consulta < ActiveRecord::Base
   belongs_to :paciente
   belongs_to :terapeuta
   
-  validates_uniqueness_of :data_consulta, :scope => [:terapeuta_id]
+  validates_presence_of :terapeuta, :paciente
+  validates_uniqueness_of :data_consulta, :scope => [:terapeuta_id], :message => 'já marcada. Escolha outro horário.'
+  
+  before_validation :setar_dia_hora
+  
+  validate :existe_disponibilidade?, :if => lambda { |c| c.data_valida? }
   
   attr_accessor :hora_consulta, :dia_consulta
   
@@ -11,70 +16,15 @@ class Consulta < ActiveRecord::Base
      ['13:00 - 14:00', '13:00'], ['14:00 - 15:00', '14:00'], ['15:00 - 16:00', '15:00'], ['16:00 - 17:00', '16:00'], ['17:00 - 18:00', '17:00']]
   end
   
-  def descricao
-    descricao = 'Paciente: ' + self.paciente.pessoa.nome + ' - Data/Hora: ' + 
-                Consulta.formatar_data_consulta(self.data_consulta) + ' - ' + Consulta.formatar_hora_consulta(self.data_consulta)
-  end
-  
-  def self.formatar_hora_consulta(datetime)
-    hora = datetime.to_time.try(:strftime, '%H:%M') if datetime
-  end
-  
-  def self.formatar_data_consulta(datetime)
-    data = datetime.to_date
-    partes = data.to_s.split /-/
-    data_formatada = [partes[2], partes[1], partes[0]].join '/'
-  end
-  
-  def formatar_data_hora_consulta(hora,dia)
-    self.data_consulta = (Consulta.transformar_data(dia) + ' ' + hora).to_datetime
+  def setar_dia_hora
+    self.data_consulta = DateTime.strptime("#{dia_consulta} #{hora_consulta}", "%d/%m/%Y %H:%M")
+  rescue
   end
   
   def self.transformar_data(data)
     formato_data = /\d{2}\/\d{2}\/\d{4}/
     data_split = data.split(/\//)
     dataForm = "#{data_split[2]}-#{data_split[1]}-#{data_split[0]}"
-   end
-  
-  def eh_bisexto(ano)
-    if (ano % 4) == 0 && ((ano % 400 == 0) || (ano % 100 != 0))
-      return true
-    end
-      return false
-  end
-  
-  def validar_data(data)
-    dia = data[0].to_i
-    mes = data[1].to_i
-    ano = data[2].to_i
-    
-    meses_30 = [4,6,9,11]
-    meses_31 = [1,3,5,7,8,12]
-    fev_max = 28
-    
-    if mes > 12 || mes  < 1
-      return false
-    else
-      if eh_bisexto(ano)
-        fev_max = 29
-      end
-      
-      if meses_30.include?(mes)
-        if dia < 1 || dia > 30
-          return false
-        end
-      elsif meses_31.include?(mes)
-        if dia < 1 || dia > 31
-          return false
-        end
-      else 
-        if dia < 1 || dia > fev_max
-          return false
-        end
-      end
-    end      
-    
-    return true
   end
   
   def self.data_segunda_feira(data_hoje)
@@ -105,17 +55,24 @@ class Consulta < ActiveRecord::Base
     return data_formatada
   end
   
-  def self.verificar_disponibilidade(hora, dia_semana, terapeuta_id)
-    hora_agenda = "2000-01-01  #{hora}".to_datetime
-    agendas = AgendaDisponibilidade.find(:all, :conditions => {:hora_inicial => hora_agenda, :dia_semana => dia_semana, :terapeuta_id => terapeuta_id})
+  def dia_semana
+    self.data_consulta.to_date.wday() - 1 if self.data_consulta
+  end
+  
+  def data_valida?
+    DateTime.strptime("#{dia_consulta} #{hora_consulta}", "%d/%m/%Y %H:%M")
+    true
+  rescue
+    self.errors.add(:data_consulta, 'inválida.')
+    false
+  end
+  
+  def existe_disponibilidade?
+    agendas = AgendaDisponibilidade.find(:all, :conditions => {:hora_inicial => self.data_consulta, :dia_semana => self.dia_semana, :terapeuta_id => self.terapeuta})
     
-    if(agendas.empty?)
-       #self.errors.add(:terapeuta_id, 'is invalid')
-       return false
+    if agendas.empty?
+      errors.add_to_base('O terapeuta não atende no horário selecionado.') if errors.empty?
     end
-    
-    return true
-    
   end
   
 end

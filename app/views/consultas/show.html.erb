@@ -6,9 +6,9 @@
 	<dt>Paciente</dt>
 	<dd><%= @consulta.paciente.pessoa.nome %></dd>
 	<dt>Horário</dt>
-	<dd><%= Consulta.formatar_hora_consulta(@consulta.data_consulta) %></dd>
+	<dd><%= l @consulta.data_consulta, :format => :hora %></dd>
 	<dt>Data</dt>
-	<dd><%= Consulta.formatar_data_consulta(@consulta.data_consulta) %></dd>
+	<dd><%= l @consulta.data_consulta, :format => :dia %></dd>
 	<dt>Observações</dt>
 	<dd>
 		<div class="comprimento-8 importante primeiro">

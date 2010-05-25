@@ -68,8 +68,8 @@ function mudar_terapeuta(select){
 	<br style="clear:both;" />
 	<div id="calendario-wrapper">
 		<div class="opcoes-calendario">
-			<a class="anterior" href="#" onclick="retornar(<%= $terapeuta_selecionado%>)">Semana anterior</a>									
-			<a class="proxima" href="#" onclick="avancar(<%= $terapeuta_selecionado%>)">Próxima semana</a>
+			<a class="anterior" href="#" onclick="retornar(<%= $terapeuta_selecionado%>); return false;">Semana anterior</a>									
+			<a class="proxima" href="#" onclick="avancar(<%= $terapeuta_selecionado%>); return false;">Próxima semana</a>
 		</div>
 		
 		<br style="clear:both;" />

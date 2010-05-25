@@ -45,12 +45,12 @@
 	
 	<div class="comprimento-4">
 		<%= f.label :hora_consulta, 'Horário' %>
-		<%= f.select :hora_consulta, Consulta.horas_consulta, {:selected => Consulta.formatar_hora_consulta(@consulta.data_consulta)}, {:disabled => true} %>
+		<%= f.select :hora_consulta, Consulta.horas_consulta, {:selected => l(@consulta.data_consulta, :format => :hora_reduzida)}, {:disabled => true} %>
 	</div>
 	
 	<div class="comprimento-4">
 		<%= f.label :dia_consulta, 'Data' %>
-		<%= f.text_field :dia_consulta, :maxlength => 10, :value => Consulta.formatar_data_consulta(@consulta.data_consulta), :readonly => true, :onkeypress => "mascara(this,mdata)" %>
+		<%= f.text_field :dia_consulta, :maxlength => 10, :value => l(@consulta.data_consulta, :format => :dia), :readonly => true, :onkeypress => "mascara(this,mdata)" %>
 	</div>
 
 	<div class="comprimento-4 primeiro">

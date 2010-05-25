@@ -47,9 +47,8 @@ class PacientesController < ApplicationController
     @paciente = Paciente.new(params[:paciente])
     @paciente.pessoa.telefones[0].celular = false
     @paciente.pessoa.telefones[1].celular = true
-    data_valida = @paciente.pessoa.transformar_data params[:paciente][:pessoa_attributes][:data_nascimento]
     
-    if data_valida && @paciente.save
+    if @paciente.save
       flash[:notice] = 'Paciente criado com sucesso.'
       redirect_to(@paciente)
     else
@@ -61,11 +60,9 @@ class PacientesController < ApplicationController
   # PUT /pacientes/1.xml
   def update
     @paciente = Paciente.find(params[:id])
-    data_valida = @paciente.pessoa.transformar_data params[:paciente][:pessoa_attributes][:data_nascimento]
-    params[:paciente][:pessoa_attributes][:data_nascimento] = @paciente.pessoa.data_nascimento.to_s
 
     respond_to do |format|
-      if data_valida && @paciente.update_attributes(params[:paciente])
+      if @paciente.update_attributes(params[:paciente])
         flash[:notice] = 'Paciente atualizado com sucesso.'
         format.html { redirect_to(@paciente) }
         format.xml  { head :ok }

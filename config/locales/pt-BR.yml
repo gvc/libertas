@@ -16,7 +16,11 @@ pt-BR:
     formats:
       default: "%A, %d de %B de %Y, %H:%M h"
       short: "%d/%m, %H:%M h"
+      medium: "%A, %d de %B de %Y, %Hh"
       long: "%A, %d de %B de %Y, %H:%M h"
+      hora: "%H:%Mh"
+      hora_reduzida: "%H:%M"
+      dia: "%d/%m/%Y"
     am: ''
     pm: ''
   
