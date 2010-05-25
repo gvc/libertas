@@ -22,7 +22,7 @@ test:
 production:
   adapter: mysql
   database: libertas
-  username: root
-  password:
+  username: teste
+  password: barcelona
   pool: 5
   timeout: 5000
