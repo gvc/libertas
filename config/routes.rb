@@ -3,6 +3,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :pacientes
   map.resources :terapeutas
+  map.resources :funcionarios
   map.resources :contas
   map.resources :consultas
 

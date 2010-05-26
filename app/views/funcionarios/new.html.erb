@@ -1,0 +1,30 @@
+<h1>Cadastrar Funcionário</h1>
+
+<% form_for(@funcionario, :html => {:class => 'cadastro'}) do |f| %>
+  <%= f.error_messages %>
+	
+  <% f.fields_for :pessoa do |pessoa_builder| %>
+  	<%= render 'pacientes/campos_pessoa', :f => pessoa_builder, :modelo => @funcionario %>
+  <% end %>
+
+	<div class="comprimento-4 primeiro">
+		<%= f.label :rg, 'R.G.*' %>
+		<%= f.text_field :rg %>
+	</div>
+
+	<div class="comprimento-4">
+		<%= f.label :salario, 'Salário (R$)' %>
+		<%= f.text_field :salario %>
+	</div>
+	
+	<div class="comprimento-4">
+		<%= f.label :data_contratacao, 'Data de Contratação' %>
+		<%= f.text_field :data_contratacao, :maxlength => 10, :onkeypress => "mascara(this,mdata)" %>
+	</div>
+
+  <div class = "botoes primeiro">
+	<%= f.submit 'Enviar' %>
+	ou
+	<%= link_to 'cancelar', funcionarios_path %>
+  </div>
+<% end %>

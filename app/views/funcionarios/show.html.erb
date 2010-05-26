@@ -1,0 +1,48 @@
+<h1>Visualizar funcionário</h1>
+
+<dl>
+	<dt>Nome</dt>
+	<dd><%= @funcionario.pessoa.nome %></dd>
+	
+	<dt>Sexo</dt>
+	<dd><%= @funcionario.pessoa.sexo %></dd>
+	
+	<dt>Data de Nascimento</dt>
+	<dd><%= l @funcionario.pessoa.data_nascimento %></dd>
+	
+	<dt>Rua</dt>
+	<dd><%= @funcionario.pessoa.endereco.rua %></dd>
+	
+	<dt>Bairro</dt>
+	<dd><%= @funcionario.pessoa.endereco.bairro %></dd>
+	
+	<dt>Cidade</dt>
+	<dd><%= @funcionario.pessoa.endereco.cidade %></dd>
+		
+	<dt>Estado</dt>
+	<dd><%= @funcionario.pessoa.endereco.estado %></dd>
+	
+	<dt>CEP</dt>
+	<dd><%= @funcionario.pessoa.endereco.cep %></dd>
+	
+	<dt>CPF</dt>
+	<dd><%= @funcionario.pessoa.cpf %></dd>
+	
+	<dt>Email</dt>
+	<dd><%= @funcionario.pessoa.email %></dd>
+	
+	<dt>Login</dt>
+	<dd><%= @funcionario.pessoa.username %></dd>
+	
+	<dt>R.G.</dt>
+	<dd><%= @funcionario.rg %></dd>
+	
+	<dt>Salário</dt>
+	<dd><%= number_to_currency @funcionario.salario %></dd>
+	
+	<dt>Data de Contratação</dt>
+	<dd><%= l @funcionario.data_contratacao if @funcionario.data_contratacao %></dd>
+</dl>
+
+<%= link_to 'Atualizar', edit_funcionario_path(@funcionario) %> |
+<%= link_to 'Retornar para a listagem', funcionarios_path %>
