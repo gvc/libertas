@@ -1,3 +1,9 @@
+<% if flash[:erro] %>
+  <div class="erro">
+    <%= flash[:erro] %>
+  </div>
+<% end -%>
+
 <h1>Lista de Consultas</h1>
 
 <% if @consultas and @consultas.any? %>
@@ -15,10 +21,12 @@
 								<a href="<%= consulta_path consulta %>">
 									<img src="/images/listarsmall.png" alt="Listar">
 								</a>
-								<a href="<%= edit_consulta_path consulta %>">
-									<img src="/images/atualizarsmall.png" alt="Listar">
-								</a>
-								<%= link_to "<img src='/images/removersmall.png' alt='Listar'>", consulta, :confirm => 'Deseja realmente remover?', :method=> :delete %>
+								<% if Pessoa.funcionario?(session[:user]) %>
+  								<a href="<%= edit_consulta_path consulta %>">
+  									<img src="/images/atualizarsmall.png" alt="Listar">
+  								</a>
+  								<%= link_to "<img src='/images/removersmall.png' alt='Listar'>", consulta, :confirm => 'Deseja realmente remover?', :method=> :delete %>
+                <% end -%>
 							</div>
 						</div>
 					</td>

@@ -1,6 +1,10 @@
 class SessionsController < ApplicationController
   
   def index
+    if session[:user]
+      flash[:erro] = 'Você não pode acessar esta página.'
+      redirect_to consultas_path
+    end
   end
   
   def create

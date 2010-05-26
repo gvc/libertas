@@ -1,4 +1,6 @@
 class RelatoriosController < ApplicationController
+  before_filter :autenticar
+  
   def despesas
     processar_datas
     @despesas = Conta.despesas.all(:conditions => ['data_vencimento BETWEEN ? AND ?', @data_inicial, @data_final], :order => 'data_vencimento')
@@ -21,5 +23,12 @@ protected
     
     @data_inicial = Date.new(ano, mes, 1)
     @data_final = @data_inicial.at_end_of_month
+  end
+
+  def autenticar
+    unless Pessoa.administrador?(session[:user])
+      flash[:erro] = 'Você não pode acessar esta opção.'
+      redirect_to '/'
+    end
   end
 end

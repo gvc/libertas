@@ -1,4 +1,6 @@
 class FuncionariosController < ApplicationController
+  before_filter :autenticar
+  
   # GET /funcionarios
   def index
     @funcionarios = Funcionario.all
@@ -50,5 +52,13 @@ class FuncionariosController < ApplicationController
     @funcionario.destroy
     flash[:notice] = 'Funcionário removido com sucesso.'
     redirect_to(funcionarios_url)
+  end
+  
+protected
+  def autenticar
+    unless Pessoa.funcionario?(session[:user])
+      flash[:erro] = 'Você não pode acessar a listagem de pacientes.'
+      redirect_to '/'
+    end
   end
 end

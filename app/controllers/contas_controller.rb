@@ -1,4 +1,6 @@
 class ContasController < ApplicationController
+  before_filter :autenticar
+  
   # GET /contas
   # GET /contas.xml
   def index
@@ -82,6 +84,14 @@ class ContasController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(contas_url) }
       format.xml  { head :ok }
+    end
+  end
+  
+protected
+  def autenticar
+    unless Pessoa.funcionario?(session[:user])
+      flash[:erro] = 'Você não pode acessar a listagem de pacientes.'
+      redirect_to '/'
     end
   end
 end

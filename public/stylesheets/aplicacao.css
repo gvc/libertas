@@ -155,3 +155,8 @@ UL#menu LI A:hover {
 .fieldWithErrors label {
 	color: red;
 }
+
+.erro {
+  color: red;
+  text-align: center;
+}

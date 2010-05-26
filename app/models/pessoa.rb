@@ -136,4 +136,13 @@ class Pessoa < ActiveRecord::Base
       errors.add(:cpf, 'é inválido.')
     end
   end
+
+  def self.funcionario?(usuario)
+    Funcionario.find_by_pessoa_id(usuario.id)
+  end
+  
+  def self.administrador?(usuario)
+    funcionario = funcionario?(usuario)
+    funcionario.admin? if funcionario    
+  end
 end

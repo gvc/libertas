@@ -1,4 +1,6 @@
 class ConsultasController < ApplicationController
+
+  before_filter :autenticar, :only => [:destroy]
   
   $datas
   $terapeuta_selecionado
@@ -95,6 +97,12 @@ class ConsultasController < ApplicationController
 
     redirect_to(consultas_url)
   end
+  
+protected
+  def autenticar
+    unless Pessoa.funcionario?(session[:user])
+      flash[:erro] = 'Você não pode desmarcar uma consulta.'
+      redirect_to '/'
+    end
+  end
 end
-
-
