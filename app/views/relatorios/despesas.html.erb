@@ -1,0 +1,46 @@
+<h1>Relatório de Despesas</h1>
+
+<div id="meses">
+	<form action="#" id="mes">
+		Mês:
+		<%= select_month @data_inicial %>
+		<%= select_year @data_inicial %>
+	</form>
+</div>
+
+<table class="lista">
+	<thead>
+		<tr>
+			<th width="60%">Descrição</th>
+			<th>Vencimento</th>
+			<th>Pagamento</th>
+			<th>Valor</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% if @despesas.any? %>
+			<% for conta in @despesas %>
+				<tr>
+					<td><%= conta.descricao %></td>
+					<td><%= l conta.data_vencimento if conta.data_vencimento %></td>
+					<td><%= l conta.data_pagamento if conta.data_pagamento %></td>
+					<td class="numerico"><%= number_to_currency conta.valor %></td>
+				</tr>
+			<% end -%>
+			<tr class="rodape">
+				<td colspan="3">Total</td>
+				<td class="numerico"><%= number_to_currency @despesas.inject(0) { |total,conta| total += conta.valor } %></td>
+			</tr>
+		<% else %>
+			<tr>
+				<td colspan="4" style="text-align: center">Não há despesas para este mês.</td>
+			</tr>
+		<% end -%>
+	</tbody>
+</table>
+
+<script type="text/javascript" charset="utf-8">
+	$('#date_month, #date_year').change(function() {
+		$('FORM#mes').submit();
+	});
+</script>

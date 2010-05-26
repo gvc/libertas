@@ -3,6 +3,9 @@ class Conta < ActiveRecord::Base
   
   validates_presence_of :descricao, :valor, :tipo_conta  
   validates_inclusion_of :tipo_conta, :in => %w{R D}
+  
+  named_scope :receitas, :conditions => {:tipo_conta => 'R'}
+  named_scope :despesas, :conditions => {:tipo_conta => 'D'}
 
   def transformar_datas(data_pagamento, data_vencimento)
     formato_data = /\d{2}\/\d{2}\/\d{4}/

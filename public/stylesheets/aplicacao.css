@@ -84,6 +84,9 @@ UL#menu LI A:hover {
 	text-align: center;
 }
 
+/***********************
+  CALENDÁRIO
+************************/
 .calendario TH {
 	width: 200px;
 	background-color: rgb(244,142,4);
@@ -124,6 +127,24 @@ UL#menu LI A:hover {
 .opcoes-calendario a.proxima {
 	float: right;
 	text-align: right;
+}
+
+/***********************
+  RELATÓRIOS
+************************/
+#meses {
+  font-size: 85%;
+  margin-bottom: .5em;
+  width: 80%;
+  text-align: right;
+}
+
+.receita {
+  color: green;
+}
+
+.despesa {
+  color: red;
 }
 
 /*PARA SER REMOVIDO*/

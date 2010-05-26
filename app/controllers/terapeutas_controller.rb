@@ -26,7 +26,6 @@ class TerapeutasController < ApplicationController
 
   def update
     @terapeuta = Terapeuta.find(params[:id])
-    
     if @terapeuta.update_attributes(params[:terapeuta])
       flash[:notice] = 'Terapeuta atualizado com sucesso.'
       redirect_to(@terapeuta)

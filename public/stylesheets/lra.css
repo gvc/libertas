@@ -8,7 +8,8 @@
 
 }
 
-.lista td {
+.lista td,
+.lista th {
 
        border-width: 1px;
        border-style: none none solid none;
@@ -16,11 +17,23 @@
 
 }
 
+.lista th {
+  background-color: rgba(244,110,4,0.1);
+}
+
+.lista td.numerico {
+  text-align: right;
+}
+
 .lista A {
 
        text-decoration: none;
        padding-right: 10px;
 
+}
+
+.lista .rodape {
+  font-weight: bold;
 }
 
 A IMG{
