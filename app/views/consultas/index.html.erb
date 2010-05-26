@@ -35,9 +35,15 @@
 		</tbody>
 	</table>
 <% else %>
-	<p>Não há consultas cadastradas</p>
+	<% if Pessoa.funcionario?(session[:user]) %>
+		<p>Não há consultas cadastradas.</p>
+	<% else %>
+		<p>Não existem consultas marcadas para você.</p>
+	<% end %>
 <% end -%>
 
+<% if Pessoa.funcionario?(session[:user]) %>
 <p>
 	<%= link_to 'Cadastrar nova consulta', new_consulta_path %>
 </p>
+<% end -%>

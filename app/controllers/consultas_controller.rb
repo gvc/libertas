@@ -8,7 +8,11 @@ class ConsultasController < ApplicationController
   # GET /consultas
   # GET /consultas.xml
   def index
-    @consultas = Consulta.find(:all, :include => [{:paciente => :pessoa}], :order => "data_consulta DESC, pessoas.nome ASC")
+    @consultas = if Pessoa.funcionario?(session[:user])
+      Consulta.find(:all, :include => [{:paciente => :pessoa}], :order => "data_consulta DESC, pessoas.nome ASC")
+    else
+      Consulta.find(:all, :conditions => {:paciente_id => Paciente.find_by_pessoa_id(session[:user]).try(:id)}, :include => [{:paciente => :pessoa}], :order => "data_consulta DESC, pessoas.nome ASC")
+    end
 
     respond_to do |format|
       format.html # index.html.erb
